@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Android Studio Projects\\Gardenia-master\\Gardenia-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-be\\values-be.xml",
+            "outputFile": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-be\\values-be.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Ameer\\.gradle\\caches\\transforms-3\\22a7fd10e2c62ade854b183a82a777ab\\transformed\\jetified-play-services-base-17.1.0\\res\\values-be\\values.xml",

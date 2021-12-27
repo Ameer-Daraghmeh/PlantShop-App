@@ -1,2 +1,0 @@
-# Gardenia
-Senior project

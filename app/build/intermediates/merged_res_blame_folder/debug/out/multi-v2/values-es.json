@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Android Studio Projects\\Gardenia-master\\Gardenia-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es\\values-es.xml",
+            "outputFile": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es\\values-es.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Ameer\\.gradle\\caches\\transforms-3\\68d7cdae38eeae15544507af80334ed8\\transformed\\appcompat-1.3.1\\res\\values-es\\values-es.xml",

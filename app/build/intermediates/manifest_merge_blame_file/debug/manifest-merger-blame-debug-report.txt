@@ -6,9 +6,9 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-8-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml
+8-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="31" />
-9-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml
+9-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml
 10
 11    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
 12    <!-- <uses-sdk android:minSdkVersion="14"/> -->
@@ -20,55 +20,55 @@
 14-->[com.google.firebase:firebase-database:20.0.2] C:\Users\Ameer\.gradle\caches\transforms-3\839877f5d36183636484b24d880634cd\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:26:22-64
 15
 16    <application
-16-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:5:5-28:19
+16-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:5:5-28:19
 17        android:allowBackup="true"
-17-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:6:9-35
+17-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:6:9-35
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 18-->[androidx.core:core:1.5.0] C:\Users\Ameer\.gradle\caches\transforms-3\39af698a575a2b7a229849e06b1c692b\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 19        android:debuggable="true"
 20        android:extractNativeLibs="false"
 21        android:fullBackupOnly="true"
-21-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:7:9-38
+21-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:7:9-38
 22        android:icon="@mipmap/ic_launcher"
-22-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:8:9-43
+22-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:8:9-43
 23        android:label="@string/app_name"
-23-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:9:9-41
+23-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:9:9-41
 24        android:roundIcon="@mipmap/ic_launcher_round"
-24-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:10:9-54
+24-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:10:9-54
 25        android:supportsRtl="true"
-25-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:11:9-35
+25-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:11:9-35
 26        android:testOnly="true"
 27        android:theme="@style/Theme.Gardenia" >
-27-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:12:9-46
+27-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:12:9-46
 28        <activity
-28-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:13:9-15:40
+28-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:13:9-15:40
 29            android:name="com.ameerdev.gardenia.RegisterActivity"
-29-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:14:13-45
+29-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:14:13-45
 30            android:exported="false" />
-30-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:15:13-37
+30-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:15:13-37
 31        <activity
-31-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:16:9-24:20
+31-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:16:9-24:20
 32            android:name="com.ameerdev.gardenia.LoginActivity"
-32-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:17:13-42
+32-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:17:13-42
 33            android:exported="true" >
-33-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:18:13-36
+33-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:18:13-36
 34            <intent-filter>
-34-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:19:13-23:29
+34-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:19:13-23:29
 35                <action android:name="android.intent.action.MAIN" />
-35-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:20:17-69
-35-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:20:25-66
+35-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:20:17-69
+35-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:20:25-66
 36
 37                <category android:name="android.intent.category.LAUNCHER" />
-37-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:22:17-77
-37-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:22:27-74
+37-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:22:17-77
+37-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:22:27-74
 38            </intent-filter>
 39        </activity>
 40        <activity
-40-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:25:9-27:39
+40-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:25:9-27:39
 41            android:name="com.ameerdev.gardenia.MainActivity"
-41-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:26:13-41
+41-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:26:13-41
 42            android:exported="true" />
-42-->E:\Android Studio Projects\Gardenia-master\Gardenia-master\app\src\main\AndroidManifest.xml:27:13-36
+42-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:27:13-36
 43
 44        <service
 44-->[com.google.firebase:firebase-database:20.0.2] C:\Users\Ameer\.gradle\caches\transforms-3\839877f5d36183636484b24d880634cd\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:29:9-35:19
