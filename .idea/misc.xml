@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android Studio Projects/Gardenia-master/Gardenia-master/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/Gardenia-master/Gardenia-master/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android Studio Projects/Gardenia-master/Gardenia-master/app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/Gardenia/app/src/main/res/drawable/ic_home.xml" value="0.3828125" />
+        <entry key="..\:/Android Studio Projects/Gardenia/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
+        <entry key="..\:/Android Studio Projects/Gardenia/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.3828125" />
+        <entry key="..\:/Android Studio Projects/Gardenia/app/src/main/res/drawable/icons8_home.xml" value="0.3828125" />
+        <entry key="..\:/Android Studio Projects/Gardenia/app/src/main/res/drawable/noun_medicine_bag_2222602.xml" value="0.3828125" />
+        <entry key="..\:/Android Studio Projects/Gardenia/app/src/main/res/drawable/noun_more_3566665.xml" value="0.3828125" />
+        <entry key="..\:/Android Studio Projects/Gardenia/app/src/main/res/drawable/noun_plant_1914.xml" value="0.3828125" />
+        <entry key="..\:/Android Studio Projects/Gardenia/app/src/main/res/drawable/noun_plant_4369325.xml" value="0.3828125" />
+        <entry key="..\:/Android Studio Projects/Gardenia/app/src/main/res/drawable/rounded_corner.xml" value="0.3828125" />
+        <entry key="..\:/Android Studio Projects/Gardenia/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/Gardenia/app/src/main/res/layout/fragment_diagnose.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android Studio Projects/Gardenia/app/src/main/res/layout/fragment_garden.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android Studio Projects/Gardenia/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android Studio Projects/Gardenia/app/src/main/res/layout/fragment_my_garden.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android Studio Projects/Gardenia/app/src/main/res/menu/bottom_menu.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/Gardenia/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22135416666666666" />
+        <entry key="..\:/Android Studio Projects/Gardenia/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

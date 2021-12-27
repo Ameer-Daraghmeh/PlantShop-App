@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/icons8_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/gardenFragment"
+        android:icon="@drawable/noun_plant_4369325"
+        android:title="My Plants" />
+    <item
+        android:id="@+id/diagnoseFragment"
+        android:icon="@drawable/noun_medicine_bag_2222602"
+        android:title="Diagnose" />
+
+    <item
+        android:icon="@drawable/noun_more_4119183"
+        android:title="More" />
+</menu>

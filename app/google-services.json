@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "11844467750",
+    "firebase_url": "https://gardenia-test-ea852-default-rtdb.firebaseio.com",
+    "project_id": "gardenia-test-ea852",
+    "storage_bucket": "gardenia-test-ea852.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11844467750:android:50c71a1a9170b74da27ae7",
+        "android_client_info": {
+          "package_name": "com.ameerdev.gardenia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11844467750-nobm16a2j557g4ficn20fi5e6b9hvlj3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsB9_3ghzpUQPipDXsBApj2fL8ETHu0vs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11844467750-nobm16a2j557g4ficn20fi5e6b9hvlj3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11844467750:android:8570a8502a3bdd2da27ae7",
+        "android_client_info": {
+          "package_name": "com.example.gardeniatest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11844467750-nobm16a2j557g4ficn20fi5e6b9hvlj3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsB9_3ghzpUQPipDXsBApj2fL8ETHu0vs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11844467750-nobm16a2j557g4ficn20fi5e6b9hvlj3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
