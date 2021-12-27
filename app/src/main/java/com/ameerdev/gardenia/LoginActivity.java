@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         tv_register = findViewById(R.id.tv_register);
         btn_login = findViewById(R.id.btn_login);
 
-
+//test
 /**
  * Login Button
  */
