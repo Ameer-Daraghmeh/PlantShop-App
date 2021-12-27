@@ -37,8 +37,8 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         tv_register = findViewById(R.id.tv_register);
         btn_login = findViewById(R.id.btn_login);
+lj
 
-//test
 /**
  * Login Button
  */
