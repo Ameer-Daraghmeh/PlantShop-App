@@ -2085,6 +2085,7 @@ id continuousVelocity
 id coordinator
 id cos
 id counterclockwise
+id create_acct_progress
 id currentState
 id custom
 id customPanel
@@ -2134,9 +2135,9 @@ id enterAlways
 id enterAlwaysCollapsed
 id et_confirm_password
 id et_email
-id et_first_name
-id et_last_name
 id et_password
+id et_phoneNumber
+id et_username
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -2197,6 +2198,7 @@ id light
 id line1
 id line3
 id linear
+id linearLayout
 id listMode
 id list_item
 id ll_terms_and_condition
@@ -2316,6 +2318,7 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
+id scrollView2
 id scrollable
 id search_badge
 id search_bar

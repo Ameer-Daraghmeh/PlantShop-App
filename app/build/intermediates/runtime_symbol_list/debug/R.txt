@@ -2084,6 +2084,7 @@ int id continuousVelocity 0x7f08008d
 int id coordinator 0x7f08008e
 int id cos 0x7f08008f
 int id counterclockwise 0x7f080090
+int id create_acct_progress 0x7f080203
 int id currentState 0x7f080091
 int id custom 0x7f080092
 int id customPanel 0x7f080093
@@ -2133,9 +2134,9 @@ int id enterAlways 0x7f0800be
 int id enterAlwaysCollapsed 0x7f0800bf
 int id et_confirm_password 0x7f0800c0
 int id et_email 0x7f0800c1
-int id et_first_name 0x7f0800c2
-int id et_last_name 0x7f0800c3
 int id et_password 0x7f0800c4
+int id et_phoneNumber 0x7f080205
+int id et_username 0x7f080204
 int id exitUntilCollapsed 0x7f0800c5
 int id expand_activities_button 0x7f0800c6
 int id expanded_menu 0x7f0800c7
@@ -2196,6 +2197,7 @@ int id light 0x7f0800fd
 int id line1 0x7f0800fe
 int id line3 0x7f0800ff
 int id linear 0x7f080100
+int id linearLayout 0x7f080207
 int id listMode 0x7f080101
 int id list_item 0x7f080102
 int id ll_terms_and_condition 0x7f080103
@@ -2315,6 +2317,7 @@ int id scroll 0x7f080174
 int id scrollIndicatorDown 0x7f080175
 int id scrollIndicatorUp 0x7f080176
 int id scrollView 0x7f080177
+int id scrollView2 0x7f080206
 int id scrollable 0x7f080178
 int id search_badge 0x7f080179
 int id search_bar 0x7f08017a

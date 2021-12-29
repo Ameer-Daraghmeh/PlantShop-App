@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (!TextUtils.isEmpty(et_email.getText().toString())&&
                         !TextUtils.isEmpty(et_password.getText().toString()))
                 {
-                LoginAuth(et_email.getText().toString(),et_password.getText().toString());
+                    LoginAuth(et_email.getText().toString(),et_password.getText().toString());
                 }
                 else {
                     Toast.makeText(LoginActivity.this, "Enter Email and password",
@@ -86,6 +86,8 @@ public class LoginActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("fauth", "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            Intent intent = new Intent(LoginActivity.this , MainActivity.class);
+                            startActivity(intent);
                             //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.

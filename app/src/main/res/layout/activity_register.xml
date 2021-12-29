@@ -28,6 +28,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,13 +54,14 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <EditText
-                    android:id="@+id/et_first_name"
+                    android:id="@+id/et_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:padding="@dimen/et_padding"
                     android:textColor="@color/colorPrimaryText"
-                    android:textSize="@dimen/et_textSize" />
+                    android:textSize="@dimen/et_textSize"
+                    tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -77,13 +79,14 @@
                 app:layout_constraintTop_toBottomOf="@id/til_first_name">
 
                 <EditText
-                    android:id="@+id/et_last_name"
+                    android:id="@+id/et_phoneNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:padding="@dimen/et_padding"
                     android:textColor="@color/colorPrimaryText"
-                    android:textSize="@dimen/et_textSize" />
+                    android:textSize="@dimen/et_textSize"
+                    tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -107,7 +110,8 @@
                     android:inputType="textEmailAddress"
                     android:padding="@dimen/et_padding"
                     android:textColor="@color/colorPrimaryText"
-                    android:textSize="@dimen/et_textSize" />
+                    android:textSize="@dimen/et_textSize"
+                    tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -131,7 +135,8 @@
                     android:inputType="textPassword"
                     android:padding="@dimen/et_padding"
                     android:textColor="@color/colorPrimaryText"
-                    android:textSize="@dimen/et_textSize" />
+                    android:textSize="@dimen/et_textSize"
+                    tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -155,7 +160,8 @@
                     android:inputType="textPassword"
                     android:padding="@dimen/et_padding"
                     android:textColor="@color/colorPrimaryText"
-                    android:textSize="@dimen/et_textSize" />
+                    android:textSize="@dimen/et_textSize"
+                    tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
@@ -206,6 +212,7 @@
                 app:layout_constraintTop_toBottomOf="@id/ll_terms_and_condition" />
 
             <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
@@ -234,6 +241,18 @@
                     android:textColor="@color/colorSecondaryText"
                     android:textSize="@dimen/lbl_text_view_textSize" />
             </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/create_acct_progress"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
