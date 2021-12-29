@@ -1934,6 +1934,7 @@ int drawable notify_panel_notification_icon_bg 0x7f0700a4
 int drawable noun_medicine_bag_2222602 0x7f0700a5
 int drawable noun_more_4119183 0x7f0700a6
 int drawable noun_plant_4369325 0x7f0700a7
+int drawable plant_logo 0x7f0700ad
 int drawable rounded_corner 0x7f0700a8
 int drawable test_custom_background 0x7f0700a9
 int drawable tooltip_frame_dark 0x7f0700aa

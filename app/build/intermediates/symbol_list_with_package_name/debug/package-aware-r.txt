@@ -1935,6 +1935,7 @@ drawable notify_panel_notification_icon_bg
 drawable noun_medicine_bag_2222602
 drawable noun_more_4119183
 drawable noun_plant_4369325
+drawable plant_logo
 drawable rounded_corner
 drawable test_custom_background
 drawable tooltip_frame_dark

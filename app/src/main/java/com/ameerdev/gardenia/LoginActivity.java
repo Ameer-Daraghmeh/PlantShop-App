@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,11 +20,14 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import util.GardeniaApi;
+
 public class LoginActivity extends AppCompatActivity {
 
     TextView tv_register;
     Button btn_login;
     EditText et_email,et_password;
+    ProgressBar progressBar;
 
     private FirebaseAuth mAuth;
     @Override
@@ -31,6 +35,10 @@ public class LoginActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        progressBar = findViewById(R.id.create_acct_progress);
+
+        mAuth = FirebaseAuth.getInstance();
 
         et_email = findViewById(R.id.et_email);
         et_password = findViewById(R.id.et_password);
@@ -79,13 +87,16 @@ public class LoginActivity extends AppCompatActivity {
 
     void LoginAuth(String email , String password){
 
+        progressBar.setVisibility(View.VISIBLE);
 
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, (OnCompleteListener<AuthResult>) task -> {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("fauth", "signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+                           // FirebaseUser user = mAuth.getCurrentUser();
+
+
                             Intent intent = new Intent(LoginActivity.this , MainActivity.class);
                             startActivity(intent);
                             //updateUI(user);
@@ -97,7 +108,7 @@ public class LoginActivity extends AppCompatActivity {
                             //updateUI(null);
                         }
                     });
-
-
     }
+
+
 }

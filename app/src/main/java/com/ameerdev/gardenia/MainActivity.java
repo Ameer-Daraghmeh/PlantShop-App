@@ -7,8 +7,15 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import com.google.firebase.firestore.FirebaseFirestore;
+
+
 
 public class MainActivity extends AppCompatActivity{
 
@@ -16,9 +23,10 @@ public class MainActivity extends AppCompatActivity{
 
     BottomNavigationView bottomNavigationView;
 
+    private FirebaseAuth mAuth;
 
 
-
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
 
 
@@ -28,7 +36,27 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,new HomeFragment()).commit();
+          mAuth = FirebaseAuth.getInstance();
+          FirebaseUser user = mAuth.getCurrentUser();
+          assert user!=null;
+
+
+//        db.collection("Users")
+//                .get()
+//                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+//                        if (task.isSuccessful()) {
+//                            for (QueryDocumentSnapshot document : task.getResult()) {
+//                                Log.d("su", document.getId() + " => " + document.getData());
+//
+//                            }
+//                        } else {
+//                            Log.w("su", "Error getting documents.", task.getException());
+//                        }
+//                    }
+//                });
+
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

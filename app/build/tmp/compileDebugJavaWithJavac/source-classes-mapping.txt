@@ -1,7 +1,3 @@
-com/ameerdev/gardenia/BuildConfig.java
- com.ameerdev.gardenia.BuildConfig
-util/GardeniaApi.java
- util.GardeniaApi
 com/ameerdev/gardenia/RegisterActivity.java
  com.ameerdev.gardenia.RegisterActivity
  com.ameerdev.gardenia.RegisterActivity$1
@@ -15,8 +11,12 @@ com/ameerdev/gardenia/HomeFragment.java
  com.ameerdev.gardenia.HomeFragment
 com/ameerdev/gardenia/DiagnoseFragment.java
  com.ameerdev.gardenia.DiagnoseFragment
+util/GardeniaApi.java
+ util.GardeniaApi
 com/ameerdev/gardenia/GardenFragment.java
  com.ameerdev.gardenia.GardenFragment
+com/ameerdev/gardenia/BuildConfig.java
+ com.ameerdev.gardenia.BuildConfig
 com/ameerdev/gardenia/LoginActivity.java
  com.ameerdev.gardenia.LoginActivity
  com.ameerdev.gardenia.LoginActivity$1

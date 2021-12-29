@@ -199,7 +199,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="16dp"
-                android:backgroundTint="#28AC2D"
+                android:backgroundTint="#248a69"
                 android:foreground="?attr/selectableItemBackground"
                 android:gravity="center"
                 android:paddingTop="@dimen/btn_padding"

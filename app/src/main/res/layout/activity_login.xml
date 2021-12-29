@@ -24,26 +24,36 @@
             android:src="@drawable/auth_screens_background" />
 
         <ImageView
-            android:layout_width="@dimen/auth_logo_width_size"
-            android:layout_height="@dimen/auth_logo_height_size"
+            android:layout_width="247dp"
+            android:layout_height="123dp"
             android:layout_gravity="center"
             android:contentDescription="@string/app_name"
             android:scaleType="fitCenter"
-            android:src="@drawable/tutorials_eu_logo"
-            app:tint="@color/colorWhite"
-            />
+            android:src="@drawable/plant_logo"
+            app:tint="@color/colorWhite" />
 
 
     </FrameLayout>
-
+    <ProgressBar
+        android:id="@+id/create_acct_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="36dp"
         android:text="@string/title_login"
         android:textColor="@color/colorPrimaryText"
         android:textSize="@dimen/title_textSize"
+        android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/fl_header_image" />
@@ -70,7 +80,7 @@
             android:padding="@dimen/et_padding"
             android:textColor="@color/colorPrimaryText"
             android:textSize="@dimen/et_textSize"
-             />
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -95,7 +105,7 @@
             android:padding="@dimen/et_padding"
             android:textColor="@color/colorPrimaryText"
             android:textSize="@dimen/et_textSize"
-             />
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -119,7 +129,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="#2A9C2F"
+        android:backgroundTint="#248a69"
         android:foreground="?attr/selectableItemBackground"
         android:gravity="center"
         android:paddingTop="@dimen/btn_padding"

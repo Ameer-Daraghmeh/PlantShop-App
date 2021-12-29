@@ -134,14 +134,14 @@ public class RegisterActivity extends AppCompatActivity {
                                                             if (Objects.requireNonNull(task.getResult()).exists()) {
                                                                 progressBar.setVisibility(View.INVISIBLE);
 
-                                                                GardeniaApi gardeniaApi = GardeniaApi.getInstance(); //Global API
-                                                                gardeniaApi.setUserId(currentUserId);
-                                                                gardeniaApi.setUsername(username);
+//                                                                GardeniaApi gardeniaApi = GardeniaApi.getInstance(); //Global API
+//                                                                gardeniaApi.setUserId(currentUserId);
+//                                                                gardeniaApi.setUsername(username);
 
                                                                 Intent intent = new Intent(RegisterActivity.this,
                                                                         MainActivity.class);
-                                                                intent.putExtra("username", username);
-                                                                intent.putExtra("userId", currentUserId);
+//                                                                intent.putExtra("username", username);
+//                                                                intent.putExtra("userId", currentUserId);
                                                                 startActivity(intent);
 
 
