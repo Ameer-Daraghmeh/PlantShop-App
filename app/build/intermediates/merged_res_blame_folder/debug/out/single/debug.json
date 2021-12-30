@@ -76,6 +76,10 @@
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_outdoor.PNG.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\outdoor.PNG"
+    },
+    {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_auth_screens_background.png.flat",
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\auth_screens_background.png"
     },
@@ -102,6 +106,10 @@
     {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\navigation_my_nav.xml.flat",
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\navigation\\my_nav.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_indoor.PNG.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\indoor.PNG"
     },
     {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\color_nav_item_color.xml.flat",

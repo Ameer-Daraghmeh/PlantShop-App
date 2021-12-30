@@ -1899,6 +1899,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search
 drawable icons8_home
+drawable indoor
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1935,6 +1936,7 @@ drawable notify_panel_notification_icon_bg
 drawable noun_medicine_bag_2222602
 drawable noun_more_4119183
 drawable noun_plant_4369325
+drawable outdoor
 drawable plant_logo
 drawable rounded_corner
 drawable test_custom_background
@@ -2127,6 +2129,7 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editText
 id edit_query
 id elastic
 id end
@@ -2200,6 +2203,7 @@ id line1
 id line3
 id linear
 id linearLayout
+id linearLayout2
 id listMode
 id list_item
 id ll_terms_and_condition
@@ -2398,6 +2402,9 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
+id textView2
+id textView3
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon

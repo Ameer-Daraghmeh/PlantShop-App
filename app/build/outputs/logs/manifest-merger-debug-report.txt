@@ -134,12 +134,12 @@ ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:13:9-15:40
 		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:15:13-37
 	android:name
 		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:14:13-45
-activity#com.ameerdev.gardenia.LoginActivity
+activity#com.ameerdev.gardenia.MainActivity
 ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:16:9-24:20
 	android:exported
 		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:18:13-36
 	android:name
-		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:17:13-42
+		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:17:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
@@ -150,12 +150,12 @@ category#android.intent.category.LAUNCHER
 ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:22:17-77
 	android:name
 		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:22:27-74
-activity#com.ameerdev.gardenia.MainActivity
+activity#com.ameerdev.gardenia.LoginActivity
 ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:25:9-27:39
 	android:exported
 		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:27:13-36
 	android:name
-		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:26:13-41
+		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:26:13-42
 uses-sdk
 INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml

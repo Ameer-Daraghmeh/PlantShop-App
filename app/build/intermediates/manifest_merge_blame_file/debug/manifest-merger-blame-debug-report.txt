@@ -48,8 +48,8 @@
 30-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:15:13-37
 31        <activity
 31-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:16:9-24:20
-32            android:name="com.ameerdev.gardenia.LoginActivity"
-32-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:17:13-42
+32            android:name="com.ameerdev.gardenia.MainActivity"
+32-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:17:13-41
 33            android:exported="true" >
 33-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:18:13-36
 34            <intent-filter>
@@ -65,8 +65,8 @@
 39        </activity>
 40        <activity
 40-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:25:9-27:39
-41            android:name="com.ameerdev.gardenia.MainActivity"
-41-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:26:13-41
+41            android:name="com.ameerdev.gardenia.LoginActivity"
+41-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:26:13-42
 42            android:exported="true" />
 42-->E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:27:13-36
 43

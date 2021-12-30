@@ -29,7 +29,7 @@
             android:name="com.ameerdev.gardenia.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name="com.ameerdev.gardenia.LoginActivity"
+            android:name="com.ameerdev.gardenia.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,7 +38,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ameerdev.gardenia.MainActivity"
+            android:name="com.ameerdev.gardenia.LoginActivity"
             android:exported="true" />
 
         <service

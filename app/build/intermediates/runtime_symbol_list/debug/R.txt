@@ -1898,6 +1898,7 @@ int drawable ic_mtrl_chip_checked_circle 0x7f070080
 int drawable ic_mtrl_chip_close_circle 0x7f070081
 int drawable ic_search 0x7f070082
 int drawable icons8_home 0x7f070083
+int drawable indoor 0x7f0700ae
 int drawable material_cursor_drawable 0x7f070084
 int drawable material_ic_calendar_black_24dp 0x7f070085
 int drawable material_ic_clear_black_24dp 0x7f070086
@@ -1934,6 +1935,7 @@ int drawable notify_panel_notification_icon_bg 0x7f0700a4
 int drawable noun_medicine_bag_2222602 0x7f0700a5
 int drawable noun_more_4119183 0x7f0700a6
 int drawable noun_plant_4369325 0x7f0700a7
+int drawable outdoor 0x7f0700af
 int drawable plant_logo 0x7f0700ad
 int drawable rounded_corner 0x7f0700a8
 int drawable test_custom_background 0x7f0700a9
@@ -2126,6 +2128,7 @@ int id easeIn 0x7f0800b5
 int id easeInOut 0x7f0800b6
 int id easeOut 0x7f0800b7
 int id east 0x7f0800b8
+int id editText 0x7f08020c
 int id edit_query 0x7f0800b9
 int id elastic 0x7f0800ba
 int id end 0x7f0800bb
@@ -2199,6 +2202,7 @@ int id line1 0x7f0800fe
 int id line3 0x7f0800ff
 int id linear 0x7f080100
 int id linearLayout 0x7f080207
+int id linearLayout2 0x7f080208
 int id listMode 0x7f080101
 int id list_item 0x7f080102
 int id ll_terms_and_condition 0x7f080103
@@ -2397,6 +2401,9 @@ int id textSpacerNoButtons 0x7f0801c2
 int id textSpacerNoTitle 0x7f0801c3
 int id textStart 0x7f0801c4
 int id textTop 0x7f0801c5
+int id textView 0x7f080209
+int id textView2 0x7f08020a
+int id textView3 0x7f08020b
 int id text_input_end_icon 0x7f0801c6
 int id text_input_error_icon 0x7f0801c7
 int id text_input_start_icon 0x7f0801c8
