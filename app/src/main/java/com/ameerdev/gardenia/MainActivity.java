@@ -4,10 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 
 
+import com.ameerdev.gardenia.fragments.DiagnoseFragment;
+import com.ameerdev.gardenia.fragments.GardenFragment;
+import com.ameerdev.gardenia.fragments.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;

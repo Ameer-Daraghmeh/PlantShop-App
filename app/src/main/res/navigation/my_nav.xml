@@ -6,17 +6,17 @@
     app:startDestination="@id/homeFragment2">
     <fragment
         android:id="@+id/homeFragment2"
-        android:name="com.ameerdev.gardenia.HomeFragment"
+        android:name="com.ameerdev.gardenia.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/gardenFragment"
-        android:name="com.ameerdev.gardenia.GardenFragment"
+        android:name="com.ameerdev.gardenia.fragments.GardenFragment"
         android:label="fragment_garden"
         tools:layout="@layout/fragment_garden" />
     <fragment
         android:id="@+id/diagnoseFragment2"
-        android:name="com.ameerdev.gardenia.DiagnoseFragment"
+        android:name="com.ameerdev.gardenia.fragments.DiagnoseFragment"
         android:label="fragment_diagnose"
         tools:layout="@layout/fragment_diagnose" />
 </navigation>
