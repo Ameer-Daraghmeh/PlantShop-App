@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 
@@ -23,41 +24,27 @@ public class MainActivity extends AppCompatActivity{
 
 
 
-    BottomNavigationView bottomNavigationView;
+    private BottomNavigationView bottomNavigationView;
 
     private FirebaseAuth mAuth;
 
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-
+    private static final HomeFragment homeFragment = new HomeFragment();
+    private static final GardenFragment gardenFragment = new GardenFragment();
+    private static final DiagnoseFragment diagnoseFragment = new DiagnoseFragment();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Log.d("statt","onCreateMain");
           mAuth = FirebaseAuth.getInstance();
           FirebaseUser user = mAuth.getCurrentUser();
           assert user!=null;
 
-
-//        db.collection("Users")
-//                .get()
-//                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-//                        if (task.isSuccessful()) {
-//                            for (QueryDocumentSnapshot document : task.getResult()) {
-//                                Log.d("su", document.getId() + " => " + document.getData());
-//
-//                            }
-//                        } else {
-//                            Log.w("su", "Error getting documents.", task.getException());
-//                        }
-//                    }
-//                });
 
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
@@ -80,25 +67,28 @@ public class MainActivity extends AppCompatActivity{
 
 //Nav bar for fragments
     public void navItemSelected(@NonNull MenuItem item) {
-        switch(item.getItemId()){
 
+
+        switch(item.getItemId()){
             case R.id.homeFragment:
                         getSupportFragmentManager().beginTransaction().
-                                replace(R.id.fragmentContainer,new HomeFragment()).commit();
+                                replace(R.id.fragmentContainer,homeFragment).commit();
                         bottomNavigationView.getMenu().findItem(R.id.homeFragment).setChecked(true);
                         break;
 
             case R.id.gardenFragment:
                         getSupportFragmentManager().beginTransaction().
-                                replace(R.id.fragmentContainer,new GardenFragment()).commit();
+                                replace(R.id.fragmentContainer,gardenFragment).commit();
                 bottomNavigationView.getMenu().findItem(R.id.gardenFragment).setChecked(true);
                         break;
             case R.id.diagnoseFragment:
                         getSupportFragmentManager().beginTransaction().
-                                replace(R.id.fragmentContainer,new DiagnoseFragment()).commit();
+                                replace(R.id.fragmentContainer,diagnoseFragment).commit();
                 bottomNavigationView.getMenu().findItem(R.id.diagnoseFragment).setChecked(true);
                         break;
                 }
+
+
     }
 
 

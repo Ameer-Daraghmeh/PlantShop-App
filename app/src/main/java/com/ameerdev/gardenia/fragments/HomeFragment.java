@@ -2,10 +2,12 @@ package com.ameerdev.gardenia.fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,17 +15,26 @@ import android.view.ViewGroup;
 import com.ameerdev.gardenia.R;
 import com.ameerdev.gardenia.adapter.PlantRecyclerViewAdapter;
 import com.ameerdev.gardenia.models.Plant;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class HomeFragment extends Fragment {
 
 
-    private ArrayList<Plant> plantList;
-    RecyclerView mRecyclerView;
-    PlantRecyclerViewAdapter mAdapter;
+    private static final ArrayList<Plant> plantList= new ArrayList<Plant>();
+    private RecyclerView mRecyclerView;
+    private PlantRecyclerViewAdapter mAdapter;
+
+
+
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+
 
     public HomeFragment() {
         // Required empty public constructor
@@ -36,14 +47,12 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        plantList = new ArrayList<Plant>();
+
+                Log.d("statt","onCreate");
+
+                getPlantList();
 
 
-        Plant plant1 = new Plant("tomato",10);
-        Plant plant2 = new Plant("sosa",4);
-
-        plantList.add(plant1);
-        plantList.add(plant2);
 
         mRecyclerView = view.findViewById(R.id.mostpop_plant_rv);
 
@@ -52,11 +61,40 @@ public class HomeFragment extends Fragment {
         mRecyclerView.setLayoutManager(linearLayoutManager);
         mRecyclerView.setHasFixedSize(true);
 
-
        mAdapter = new PlantRecyclerViewAdapter(plantList,this.getContext());
        mRecyclerView.setAdapter(mAdapter);
+       //mRecyclerView.suppressLayout(true);
 
         // Inflate the layout for this fragment
         return view;
     }
+
+    void getPlantList(){
+
+            db.collection("Plants")
+                    .get()
+                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
+                            if (task.isSuccessful()) {
+                                for (QueryDocumentSnapshot document : task.getResult()) {
+                                    //Log.d("suuu", document.getId() + " => " + document.getData());
+
+                                    String name = document.getData().get("name").toString();
+                                    int price =  Integer.valueOf(document.getData().get("price").toString());
+
+                                        plantList.add(new Plant(name,price));
+
+                                }
+                            } else {
+                                Log.d("suuu", "Error getting documents.", task.getException());
+                            }
+                        }
+                    });
+
+
+
+    }
+
 }

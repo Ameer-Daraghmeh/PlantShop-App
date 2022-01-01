@@ -3,15 +3,6 @@ package com.ameerdev.gardenia.models;
 public class Plant {
     String name;
     int price;
-
-    @Override
-    public String toString() {
-        return "Plant{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                '}';
-    }
-
     public Plant() {
     }
 
@@ -29,10 +20,24 @@ public class Plant {
     }
 
     public String getPrice() {
-        return price+".00$";
+        return "$"+price+".00";
+    }
+    public int getPriceint() {
+        return price;
     }
 
     public void setPrice(int price) {
         this.price = price;
     }
+
+
+    @Override
+    public String toString() {
+        return "Plant{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
+
+
 }
