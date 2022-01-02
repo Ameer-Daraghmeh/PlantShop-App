@@ -2694,7 +2694,6 @@ int layout design_navigation_menu 0x7f0b002d
 int layout design_navigation_menu_item 0x7f0b002e
 int layout design_text_input_end_icon 0x7f0b002f
 int layout design_text_input_start_icon 0x7f0b0030
-int layout dimens 0x7f0b0031
 int layout fragment_diagnose 0x7f0b0032
 int layout fragment_garden 0x7f0b0033
 int layout fragment_home 0x7f0b0034

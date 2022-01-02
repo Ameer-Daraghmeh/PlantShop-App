@@ -23,6 +23,8 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
+import util.GardeniaApi;
+
 
 public class HomeFragment extends Fragment {
 
@@ -31,9 +33,12 @@ public class HomeFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private PlantRecyclerViewAdapter mAdapter;
 
+    private static HomeFragment instance;
 
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+    static int count = 0;
 
 
     public HomeFragment() {
@@ -47,12 +52,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-
-                Log.d("statt","onCreate");
-
-                getPlantList();
-
-
+        getPlantList();
 
         mRecyclerView = view.findViewById(R.id.mostpop_plant_rv);
 
@@ -71,6 +71,8 @@ public class HomeFragment extends Fragment {
 
     void getPlantList(){
 
+        if (count == 0){
+            count++;
             db.collection("Plants")
                     .get()
                     .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -84,7 +86,7 @@ public class HomeFragment extends Fragment {
                                     String name = document.getData().get("name").toString();
                                     int price =  Integer.valueOf(document.getData().get("price").toString());
 
-                                        plantList.add(new Plant(name,price));
+                                    plantList.add(new Plant(name,price));
 
                                 }
                             } else {
@@ -92,9 +94,13 @@ public class HomeFragment extends Fragment {
                             }
                         }
                     });
-
+        }
 
 
     }
+
+
+
+
 
 }

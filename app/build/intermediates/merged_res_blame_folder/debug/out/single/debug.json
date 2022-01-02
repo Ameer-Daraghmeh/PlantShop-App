@@ -36,10 +36,6 @@
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\tutorials_eu_logo.png"
     },
     {
-        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\layout_dimens.xml.flat",
-        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\layout\\dimens.xml"
-    },
-    {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },

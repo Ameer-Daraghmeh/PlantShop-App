@@ -71,10 +71,10 @@ public class MainActivity extends AppCompatActivity{
 
         switch(item.getItemId()){
             case R.id.homeFragment:
-                        getSupportFragmentManager().beginTransaction().
-                                replace(R.id.fragmentContainer,homeFragment).commit();
-                        bottomNavigationView.getMenu().findItem(R.id.homeFragment).setChecked(true);
-                        break;
+                    getSupportFragmentManager().beginTransaction().
+                            replace(R.id.fragmentContainer,homeFragment).commit();
+                    bottomNavigationView.getMenu().findItem(R.id.homeFragment).setChecked(true);
+                break;
 
             case R.id.gardenFragment:
                         getSupportFragmentManager().beginTransaction().

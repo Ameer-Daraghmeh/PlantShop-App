@@ -44,6 +44,13 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
 
         holder.bindPlant(plantList.get(position));
 
+        holder.mView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Here You Do Your Click Magic
+                Log.d("ssus", plantList.get(holder.getAdapterPosition()).getName().toString());
+            }});
+
     }
 
     @Override
@@ -61,19 +68,16 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
         public ImageView plant_img;
         public TextView plant_name, plant_price;
 
-
-        //OnTodoClickListener onTodoClickListener;
+        View mView;
 
         public PlantViewHolder(@NonNull View itemView) {
             super(itemView);
             //plant_img = itemView.findViewById(R.id.plant_img);
             plant_name =  itemView.findViewById(R.id.plant_name);
             plant_price =  itemView.findViewById(R.id.plant_price);
-            //this.onTodoClickListener = todoClickListener;
 
+            mView = itemView;
 
-            //itemView.setOnClickListener(this);
-            //radioButton.setOnClickListener(this);
 
         }
 
