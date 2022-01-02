@@ -9,7 +9,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Gardenia">
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".ui.PlantDetailsActivity"
+            android:exported="false" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />

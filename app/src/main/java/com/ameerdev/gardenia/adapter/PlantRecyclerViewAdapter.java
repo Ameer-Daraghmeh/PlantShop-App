@@ -1,6 +1,7 @@
 package com.ameerdev.gardenia.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,10 +12,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ameerdev.gardenia.LoginActivity;
+import com.ameerdev.gardenia.MainActivity;
 import com.ameerdev.gardenia.R;
 import com.ameerdev.gardenia.models.Plant;
+import com.ameerdev.gardenia.ui.PlantDetailsActivity;
 
 import java.util.ArrayList;
+
+import util.GardeniaApi;
 
 
 public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecyclerViewAdapter.PlantViewHolder>{
@@ -48,7 +54,12 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
             @Override
             public void onClick(View v) {
                 // Here You Do Your Click Magic
-                Log.d("ssus", plantList.get(holder.getAdapterPosition()).getName().toString());
+
+                GardeniaApi.setClickedPlant(plantList.get(holder.getAdapterPosition()));
+
+                Intent intent = new Intent(context , PlantDetailsActivity.class);
+                context.startActivity(intent);
+
             }});
 
     }
@@ -76,6 +87,8 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
             plant_name =  itemView.findViewById(R.id.plant_name);
             plant_price =  itemView.findViewById(R.id.plant_price);
 
+            context = itemView.getContext();
+
             mView = itemView;
 
 
@@ -88,15 +101,9 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
 
         @Override
         public void onClick(View view) {
-//            Task currTask = taskList.get(getAdapterPosition());
-//
-//            int id = view.getId();
-//            if (id == R.id.todo_row_layout) {
-//                onTodoClickListener.onTodoClick(currTask);
-//            }else if (id == R.id.todo_radio_button) {
-//                onTodoClickListener.onTodoRadioButtonClick(currTask);
-//
-//            }
+
+
+
 
         }
     }

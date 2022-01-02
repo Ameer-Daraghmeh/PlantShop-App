@@ -16,6 +16,10 @@
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\layout\\activity_register.xml"
     },
     {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_app_gradient_color_background.xml.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\app_gradient_color_background.xml"
+    },
+    {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
@@ -48,12 +52,20 @@
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\noun_medicine_bag_2222602.xml"
     },
     {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_plant_page_button.xml.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\plant_page_button.xml"
+    },
+    {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_rounded_corner.xml.flat",
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\rounded_corner.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_item_grey_border_background.xml.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\item_grey_border_background.xml"
     },
     {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
@@ -138,6 +150,10 @@
     {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_plant_details.xml.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\layout\\activity_plant_details.xml"
     },
     {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\layout_plant_row.xml.flat",
