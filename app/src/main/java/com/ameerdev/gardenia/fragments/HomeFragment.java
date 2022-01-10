@@ -46,7 +46,6 @@ public class HomeFragment extends Fragment {
     }
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -63,7 +62,7 @@ public class HomeFragment extends Fragment {
 
        mAdapter = new PlantRecyclerViewAdapter(plantList,this.getContext());
        mRecyclerView.setAdapter(mAdapter);
-       //mRecyclerView.suppressLayout(true);
+       mRecyclerView.suppressLayout(true);
 
         // Inflate the layout for this fragment
         return view;
@@ -73,7 +72,7 @@ public class HomeFragment extends Fragment {
 
         if (count == 0){
             count++;
-            db.collection("Plants")
+            db.collection("Indoor")
                     .get()
                     .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                         @Override
@@ -83,10 +82,24 @@ public class HomeFragment extends Fragment {
                                 for (QueryDocumentSnapshot document : task.getResult()) {
                                     //Log.d("suuu", document.getId() + " => " + document.getData());
 
+                                    String price =  document.getData().get("price").toString();
                                     String name = document.getData().get("name").toString();
-                                    int price =  Integer.valueOf(document.getData().get("price").toString());
+                                    String water =  document.getData().get("water").toString();
+                                    String fertilization = document.getData().get("fertilization").toString();
+                                    String description = document.getData().get("description").toString();
+                                    String plant_height = document.getData().get("plant_height").toString();
+                                    String sun_light= document.getData().get("sun_light").toString();
 
-                                    plantList.add(new Plant(name,price));
+                                    Plant plant = new Plant();
+                                    plant.setName(name);
+                                    plant.setPrice(price);
+                                    plant.setDescription(description);
+                                    plant.setFertilization(fertilization);
+                                    plant.setWater(water);
+                                    plant.setSun_light(sun_light);
+                                    plant.setPlant_height(plant_height);
+
+                                    plantList.add(plant);
 
                                 }
                             } else {
