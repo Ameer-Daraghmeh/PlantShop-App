@@ -2026,6 +2026,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_arrow_right
 drawable ic_clock_black_24dp
+drawable ic_fertilizer
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -2033,7 +2034,12 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_plant_desc
+drawable ic_plantchar
+drawable ic_planthight
 drawable ic_search
+drawable ic_sunlight
+drawable ic_water
 drawable icons8_home
 drawable indoor
 drawable item_grey_border_background

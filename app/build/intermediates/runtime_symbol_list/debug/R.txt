@@ -2025,6 +2025,7 @@ int drawable googleg_disabled_color_18 0x7f070079
 int drawable googleg_standard_color_18 0x7f07007a
 int drawable ic_arrow_right 0x7f07007b
 int drawable ic_clock_black_24dp 0x7f07007c
+int drawable ic_fertilizer 0x7f0700b8
 int drawable ic_keyboard_black_24dp 0x7f07007d
 int drawable ic_launcher_background 0x7f07007e
 int drawable ic_launcher_foreground 0x7f07007f
@@ -2032,7 +2033,12 @@ int drawable ic_mtrl_checked_circle 0x7f070080
 int drawable ic_mtrl_chip_checked_black 0x7f070081
 int drawable ic_mtrl_chip_checked_circle 0x7f070082
 int drawable ic_mtrl_chip_close_circle 0x7f070083
+int drawable ic_plant_desc 0x7f0700b9
+int drawable ic_plantchar 0x7f0700ba
+int drawable ic_planthight 0x7f0700bb
 int drawable ic_search 0x7f070084
+int drawable ic_sunlight 0x7f0700bc
+int drawable ic_water 0x7f0700bd
 int drawable icons8_home 0x7f070085
 int drawable indoor 0x7f070086
 int drawable item_grey_border_background 0x7f070087
