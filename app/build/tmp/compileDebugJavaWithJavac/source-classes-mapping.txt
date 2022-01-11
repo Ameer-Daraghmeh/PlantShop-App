@@ -1,9 +1,3 @@
-util/GardeniaApi.java
- util.GardeniaApi
-com/ameerdev/gardenia/BuildConfig.java
- com.ameerdev.gardenia.BuildConfig
-com/ameerdev/gardenia/models/Plant.java
- com.ameerdev.gardenia.models.Plant
 com/ameerdev/gardenia/RegisterActivity.java
  com.ameerdev.gardenia.RegisterActivity
  com.ameerdev.gardenia.RegisterActivity$1
@@ -17,6 +11,8 @@ com/ameerdev/gardenia/fragments/DiagnoseFragment.java
  com.ameerdev.gardenia.fragments.DiagnoseFragment
 com/ameerdev/gardenia/ui/PlantDetailsActivity.java
  com.ameerdev.gardenia.ui.PlantDetailsActivity
+ com.ameerdev.gardenia.ui.PlantDetailsActivity$1
+ com.ameerdev.gardenia.ui.PlantDetailsActivity$2
 com/ameerdev/gardenia/fragments/HomeFragment.java
  com.ameerdev.gardenia.fragments.HomeFragment
  com.ameerdev.gardenia.fragments.HomeFragment$1
@@ -24,8 +20,16 @@ com/ameerdev/gardenia/adapter/PlantRecyclerViewAdapter.java
  com.ameerdev.gardenia.adapter.PlantRecyclerViewAdapter
  com.ameerdev.gardenia.adapter.PlantRecyclerViewAdapter$1
  com.ameerdev.gardenia.adapter.PlantRecyclerViewAdapter$PlantViewHolder
+ com.ameerdev.gardenia.adapter.PlantRecyclerViewAdapter$PlantViewHolder$1
+ com.ameerdev.gardenia.adapter.PlantRecyclerViewAdapter$PlantViewHolder$2
+util/GardeniaApi.java
+ util.GardeniaApi
 com/ameerdev/gardenia/fragments/GardenFragment.java
  com.ameerdev.gardenia.fragments.GardenFragment
+com/ameerdev/gardenia/models/Plant.java
+ com.ameerdev.gardenia.models.Plant
+com/ameerdev/gardenia/BuildConfig.java
+ com.ameerdev.gardenia.BuildConfig
 com/ameerdev/gardenia/LoginActivity.java
  com.ameerdev.gardenia.LoginActivity
  com.ameerdev.gardenia.LoginActivity$1

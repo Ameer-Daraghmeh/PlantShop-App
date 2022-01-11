@@ -1986,6 +1986,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable android_logo_img_plant
 drawable app_gradient_color_background
 drawable auth_screens_background
 drawable avd_hide_password
@@ -2813,6 +2814,8 @@ layout text_view_without_line_height
 menu bottom_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap palor_palm_ppimg
+mipmap palor_palm_ppimg_round
 navigation my_nav
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description

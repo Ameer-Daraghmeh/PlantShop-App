@@ -25,7 +25,7 @@
                 android:background="@color/colorImageViewBackground"
                 android:contentDescription="@string/content_description"
                 android:scaleType="fitXY"
-                android:src="@drawable/parlor_palm"
+                android:src="@drawable/android_logo_img_plant"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

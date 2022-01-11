@@ -3,13 +3,28 @@ package com.ameerdev.gardenia.models;
 public class Plant {
     String name;
     String water , fertilization , description, plant_height, sun_light;
-
+    String plant_profile_img;
+    String plant_view_img;
     String price;
 
     public Plant() {
     }
 
+    public String getPlant_profile_img() {
+        return plant_profile_img;
+    }
 
+    public void setPlant_profile_img(String plant_profile_img) {
+        this.plant_profile_img = plant_profile_img;
+    }
+
+    public String getPlant_view_img() {
+        return plant_view_img;
+    }
+
+    public void setPlant_view_img(String plant_view_img) {
+        this.plant_view_img = plant_view_img;
+    }
 
     public String getName() {
         return name.toString();

@@ -79,25 +79,10 @@ public class HomeFragment extends Fragment {
                         public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
                             if (task.isSuccessful()) {
-                                for (QueryDocumentSnapshot document : task.getResult()) {
+                                for (QueryDocumentSnapshot plants : task.getResult()) {
                                     //Log.d("suuu", document.getId() + " => " + document.getData());
 
-                                    String price =  document.getData().get("price").toString();
-                                    String name = document.getData().get("name").toString();
-                                    String water =  document.getData().get("water").toString();
-                                    String fertilization = document.getData().get("fertilization").toString();
-                                    String description = document.getData().get("description").toString();
-                                    String plant_height = document.getData().get("plant_height").toString();
-                                    String sun_light= document.getData().get("sun_light").toString();
-
-                                    Plant plant = new Plant();
-                                    plant.setName(name);
-                                    plant.setPrice(price);
-                                    plant.setDescription(description);
-                                    plant.setFertilization(fertilization);
-                                    plant.setWater(water);
-                                    plant.setSun_light(sun_light);
-                                    plant.setPlant_height(plant_height);
+                                    Plant plant = plants.toObject(Plant.class);
 
                                     plantList.add(plant);
 

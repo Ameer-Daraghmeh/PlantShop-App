@@ -2,6 +2,7 @@ package com.ameerdev.gardenia.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,8 +13,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.ameerdev.gardenia.LoginActivity;
-import com.ameerdev.gardenia.MainActivity;
 import com.ameerdev.gardenia.R;
 import com.ameerdev.gardenia.models.Plant;
 import com.ameerdev.gardenia.ui.PlantDetailsActivity;
@@ -21,6 +20,12 @@ import com.ameerdev.gardenia.ui.PlantDetailsActivity;
 import java.util.ArrayList;
 
 import util.GardeniaApi;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 
 public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecyclerViewAdapter.PlantViewHolder>{
@@ -74,21 +79,25 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
         View Holder inner class
      *****************************/
 
-    public class PlantViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public static class PlantViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        public ImageView plant_img;
-        public TextView plant_name, plant_price;
+        private static ImageView plant_img;
+        private final Context context;
+        private TextView plant_name, plant_price;
 
         View mView;
 
         public PlantViewHolder(@NonNull View itemView) {
             super(itemView);
-            //plant_img = itemView.findViewById(R.id.plant_img);
+
             plant_name =  itemView.findViewById(R.id.plant_name);
             plant_price =  itemView.findViewById(R.id.plant_price);
+            plant_img = itemView.findViewById(R.id.plant_img);
+
+
+
 
             context = itemView.getContext();
-
             mView = itemView;
 
 
@@ -97,12 +106,42 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
         public void bindPlant(Plant plant) {
             plant_name.setText(plant.getName());
             plant_price.setText(plant.getPrice());
+
+            FirebaseStorage storage = FirebaseStorage.getInstance();
+
+            // Create a storage reference from our app
+            StorageReference storageRef = storage.getReference();
+
+            StorageReference load = storageRef.child(plant.getPlant_profile_img());
+
+            load.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                @Override
+                public void onSuccess(Uri uri) {
+                    // Got the download URL for 'users/me/profile.png'
+                    // Pass it to Picasso to download, show in ImageView and caching
+                    Picasso.get().load(uri.toString()).into(plant_img);
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception exception) {
+                    // Handle any errors
+                }
+            });
+
+        /*
+         Use Picasso library to download and show image
+         */
+//            Log.d("sss",plant.getPlant_profile_img());
+//            Picasso.get()
+//                    .load(plant.getPlant_profile_img())
+//                    .placeholder(R.drawable.palor_palm_ppimg)
+//                    .fit()
+//                    .into(PlantViewHolder.plant_img);
+//
         }
 
         @Override
         public void onClick(View view) {
-
-
 
 
         }

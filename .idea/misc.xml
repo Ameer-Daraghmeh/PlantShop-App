@@ -45,6 +45,9 @@
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/noun_medicine_bag_2222602.xml" value="0.2169230769230769" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/noun_more_4119183.xml" value="0.3828125" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/noun_plant_4369325.xml" value="0.3769230769230769" />
+        <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/palor_palm_ppimg.xml" value="0.17685185185185184" />
+        <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/palor_palm_ppimg_background.xml" value="0.3828125" />
+        <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/palor_palm_ppimg_foreground.xml" value="0.3828125" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/plant_page_button.xml" value="0.14351851851851852" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/rounded_corner.xml" value="0.3333333333333333" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/rv_item_image_background.xml" value="0.3769230769230769" />
@@ -60,6 +63,8 @@
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/layout/ic_launcher_background.xml" value="0.35260416666666666" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/layout/plant_row.xml" value="0.33" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/menu/bottom_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/GitHub/Gardenia/app/src/main/res/mipmap-anydpi-v26/palor_palm_ppimg.xml" value="0.253125" />
+        <entry key="..\:/GitHub/Gardenia/app/src/main/res/mipmap-anydpi-v26/palor_palm_ppimg_round.xml" value="0.253125" />
       </map>
     </option>
   </component>
