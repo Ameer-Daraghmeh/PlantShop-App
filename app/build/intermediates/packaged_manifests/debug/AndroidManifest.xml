@@ -26,6 +26,15 @@
         android:testOnly="true"
         android:theme="@style/AppTheme.NoActionBar" >
         <activity
+            android:name="com.ameerdev.gardenia.ui.OutdoorActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ameerdev.gardenia.ui.IndoorActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ameerdev.gardenia.ui.CartListActivity"
+            android:exported="false" />
+        <activity
             android:name="com.ameerdev.gardenia.ui.PlantDetailsActivity"
             android:exported="false" />
         <activity

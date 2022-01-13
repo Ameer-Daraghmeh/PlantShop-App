@@ -11,6 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
+            android:name=".ui.OutdoorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.IndoorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.CartListActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.PlantDetailsActivity"
             android:exported="false" />
         <activity

@@ -2,6 +2,8 @@ package com.ameerdev.gardenia.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,6 +19,8 @@ import com.ameerdev.gardenia.R;
 import com.ameerdev.gardenia.models.Plant;
 import com.ameerdev.gardenia.ui.PlantDetailsActivity;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import util.GardeniaApi;
@@ -32,6 +36,8 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
 
     private ArrayList<Plant> plantList = new ArrayList<>() ;
     Context context;
+
+
 
     public PlantRecyclerViewAdapter(ArrayList<Plant> plantList, Context context) {
         this.plantList = plantList;
@@ -53,14 +59,21 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
     @Override
     public void onBindViewHolder(@NonNull PlantViewHolder holder, int position) {
 
-        holder.bindPlant(plantList.get(position));
+
+        try {
+            holder.bindPlant(plantList.get(position));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Here You Do Your Click Magic
 
-                GardeniaApi.setClickedPlant(plantList.get(holder.getAdapterPosition()));
+                GardeniaApi gardeniaApi = GardeniaApi.getInstance();
+                gardeniaApi.setClickedPlant(plantList.get(holder.getAdapterPosition()));
 
                 Intent intent = new Intent(context , PlantDetailsActivity.class);
                 context.startActivity(intent);
@@ -81,11 +94,14 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
 
     public static class PlantViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        private static ImageView plant_img;
+        private ImageView plant_img;
         private final Context context;
         private TextView plant_name, plant_price;
-
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        StorageReference storageRef = storage.getReference();
         View mView;
+        StorageReference  load;
+
 
         public PlantViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -95,50 +111,60 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
             plant_img = itemView.findViewById(R.id.plant_img);
 
 
-
-
             context = itemView.getContext();
             mView = itemView;
 
 
         }
 
-        public void bindPlant(Plant plant) {
+        public void bindPlant(Plant plant) throws IOException {
             plant_name.setText(plant.getName());
             plant_price.setText(plant.getPrice());
 
-            FirebaseStorage storage = FirebaseStorage.getInstance();
-
-            // Create a storage reference from our app
-            StorageReference storageRef = storage.getReference();
-
-            StorageReference load = storageRef.child(plant.getPlant_profile_img());
-
-            load.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                @Override
-                public void onSuccess(Uri uri) {
-                    // Got the download URL for 'users/me/profile.png'
-                    // Pass it to Picasso to download, show in ImageView and caching
-                    Picasso.get().load(uri.toString()).into(plant_img);
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception exception) {
-                    // Handle any errors
-                }
-            });
-
-        /*
-         Use Picasso library to download and show image
-         */
-//            Log.d("sss",plant.getPlant_profile_img());
-//            Picasso.get()
-//                    .load(plant.getPlant_profile_img())
-//                    .placeholder(R.drawable.palor_palm_ppimg)
-//                    .fit()
-//                    .into(PlantViewHolder.plant_img);
+//            load = storageRef.child("PlantProfileImg").child(plant.getPlant_profile_img());
 //
+//            load.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+//                @Override
+//                public void onSuccess(Uri uri) {
+//                    // Got the download URL for 'users/me/profile.png'
+//                    // Pass it to Picasso to download, show in ImageView and caching
+//                    Picasso.get()
+//                            .load(uri.toString())
+//                            .placeholder(R.drawable.plant_img)
+//                            .fit()
+//                            .into(PlantViewHolder.plant_img);
+//                }
+//            }).addOnFailureListener(new OnFailureListener() {
+//                @Override
+//                public void onFailure(@NonNull Exception exception) {
+//                    // Handle any errors
+//                }
+//            });
+
+
         }
+
+        public void loadPlantImg(Plant plant) {
+
+//            StorageReference islandRef = storageRef.child("PlantProfileImg").child(plant.getPlant_profile_img());
+//
+//            final long ONE_MEGABYTE = 1024 * 1024;
+//            islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+//                @Override
+//                public void onSuccess(byte[] bytes) {
+//                    // Data for "images/island.jpg" is returns, use this as needed
+//                    Bitmap bmp = BitmapFactory.decodeByteArray(bytes,0,bytes.length);
+//                    plant_img.setImageBitmap(bmp);
+//                }
+//            }).addOnFailureListener(new OnFailureListener() {
+//                @Override
+//                public void onFailure(@NonNull Exception exception) {
+//                    // Handle any errors
+//                }
+//            });
+
+        }
+
 
         @Override
         public void onClick(View view) {

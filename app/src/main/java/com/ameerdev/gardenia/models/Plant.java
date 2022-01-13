@@ -37,6 +37,9 @@ public class Plant {
     public String getPrice() {
         return "$"+price+".00";
     }
+    public String getPrice2() {
+        return price;
+    }
 
     public void setPrice(String price) {
         this.price = price;

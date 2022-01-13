@@ -4,6 +4,10 @@
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_cart_list.xml.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\layout\\activity_cart_list.xml"
+    },
+    {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_app_gradient_color_background.xml.flat",
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\app_gradient_color_background.xml"
     },
@@ -76,6 +80,10 @@
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_vector_remove.xml.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\ic_vector_remove.xml"
+    },
+    {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_plant_logo.png.flat",
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\plant_logo.png"
     },
@@ -128,6 +136,10 @@
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\mipmap-anydpi-v26\\palor_palm_ppimg.xml"
     },
     {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_item_dashboard_background.xml.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\item_dashboard_background.xml"
+    },
+    {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_palor_palm_ppimg_round.png.flat",
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\mipmap-xxhdpi\\palor_palm_ppimg_round.png"
     },
@@ -144,8 +156,20 @@
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\layout\\activity_register.xml"
     },
     {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_shopping_cart_24.xml.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\ic_baseline_shopping_cart_24.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_indoor.xml.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\layout\\activity_indoor.xml"
+    },
+    {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_ll_bottom_border.xml.flat",
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\ll_bottom_border.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_vector_add.xml.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\ic_vector_add.xml"
     },
     {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_garden.xml.flat",
@@ -188,6 +212,10 @@
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\rounded_corner.xml"
     },
     {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_vector_delete.xml.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\ic_vector_delete.xml"
+    },
+    {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_planthight.xml.flat",
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\ic_planthight.xml"
     },
@@ -222,6 +250,10 @@
     {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_sunlight.xml.flat",
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\ic_sunlight.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\layout_cart_item_row.xml.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\layout\\cart_item_row.xml"
     },
     {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_palor_palm_ppimg.png.flat",

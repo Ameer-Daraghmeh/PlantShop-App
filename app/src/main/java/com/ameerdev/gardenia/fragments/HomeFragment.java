@@ -1,5 +1,6 @@
 package com.ameerdev.gardenia.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,10 +12,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import com.ameerdev.gardenia.R;
 import com.ameerdev.gardenia.adapter.PlantRecyclerViewAdapter;
 import com.ameerdev.gardenia.models.Plant;
+import com.ameerdev.gardenia.ui.CartListActivity;
+import com.ameerdev.gardenia.ui.IndoorActivity;
+import com.ameerdev.gardenia.ui.OutdoorActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -22,8 +28,6 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-
-import util.GardeniaApi;
 
 
 public class HomeFragment extends Fragment {
@@ -34,12 +38,14 @@ public class HomeFragment extends Fragment {
     private PlantRecyclerViewAdapter mAdapter;
 
     private static HomeFragment instance;
-
+    Button btn_cart;
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     static int count = 0;
 
+    ImageView iv_indoor;
+    ImageView iv_outdoor;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -51,18 +57,42 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        getPlantList();
+
+        /**
+         * Indoor and out door image view click
+         */
+
+        iv_indoor = view.findViewById(R.id.iv_indoor);
+        iv_outdoor = view.findViewById(R.id.iv_outdoor);
+
+        iv_indoor.setOnClickListener(view13 -> {
+            startActivity(new Intent(this.getActivity(), IndoorActivity.class));
+        });
+        iv_outdoor.setOnClickListener(view12 -> {
+            startActivity(new Intent(this.getActivity(), OutdoorActivity.class));
+
+        });
+
+
+        btn_cart = view.findViewById(R.id.btn_cart);
+
+        btn_cart.setOnClickListener(view1 -> {
+            startActivity(new Intent(this.getActivity(),CartListActivity.class));
+        });
 
         mRecyclerView = view.findViewById(R.id.mostpop_plant_rv);
+        mAdapter = new PlantRecyclerViewAdapter(plantList,this.getContext());
+
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+
+        mRecyclerView.setAdapter(mAdapter);
 
         mRecyclerView.setLayoutManager(linearLayoutManager);
         mRecyclerView.setHasFixedSize(true);
 
-       mAdapter = new PlantRecyclerViewAdapter(plantList,this.getContext());
-       mRecyclerView.setAdapter(mAdapter);
-       mRecyclerView.suppressLayout(true);
+       //mRecyclerView.setAdapter(mAdapter);
+       //mRecyclerView.suppressLayout(true);
 
         // Inflate the layout for this fragment
         return view;
@@ -86,6 +116,10 @@ public class HomeFragment extends Fragment {
 
                                     plantList.add(plant);
 
+
+                                    mAdapter.notifyDataSetChanged();
+
+
                                 }
                             } else {
                                 Log.d("suuu", "Error getting documents.", task.getException());
@@ -97,5 +131,10 @@ public class HomeFragment extends Fragment {
 
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        getPlantList();
 
+    }
 }

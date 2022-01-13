@@ -2,17 +2,21 @@ package util;
 
 import android.app.Application;
 import android.content.Intent;
+import android.util.Log;
 
 import com.ameerdev.gardenia.adapter.PlantRecyclerViewAdapter;
 import com.ameerdev.gardenia.models.Plant;
+import com.ameerdev.gardenia.ui.CartListActivity;
 import com.ameerdev.gardenia.ui.PlantDetailsActivity;
+
+import java.util.ArrayList;
 
 public class GardeniaApi extends Application {
     private String username;
     private String userId;
     private static GardeniaApi instance;
-    private static Plant clickedPlant;
-
+    private  Plant clickedPlant;
+    private ArrayList<Plant>cartList = new ArrayList<>();
     public static GardeniaApi getInstance() {
         if (instance == null)
             instance = new GardeniaApi();
@@ -20,13 +24,21 @@ public class GardeniaApi extends Application {
 
     }
 
-    public void onHomePlantClick(){
-        Intent intent = new Intent(GardeniaApi.this , PlantDetailsActivity.class);
-        startActivity(intent);
-    }
+
 
     public GardeniaApi(){}
 
+    public  ArrayList<Plant> getCartList() {
+        return cartList;
+    }
+    public  void showcartlist(){
+
+        Log.d("carlst",cartList.get(0).toString());
+    }
+
+    public  void addPlantToCart(){
+        cartList.add(clickedPlant);
+    }
 
     public String getUsername() {
         return username;
@@ -44,11 +56,11 @@ public class GardeniaApi extends Application {
         this.userId = userId;
     }
 
-    public static Plant getClickedPlant() {
+    public  Plant getClickedPlant() {
         return clickedPlant;
     }
 
-    public static void setClickedPlant(Plant clickedPlant) {
-        GardeniaApi.clickedPlant = clickedPlant;
+    public  void setClickedPlant(Plant clickedPlant) {
+        this.clickedPlant = clickedPlant;
     }
 }

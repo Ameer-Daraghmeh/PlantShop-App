@@ -3,9 +3,12 @@ package com.ameerdev.gardenia.ui;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,6 +24,7 @@ import util.GardeniaApi;
 
 public class PlantDetailsActivity extends AppCompatActivity {
 
+    GardeniaApi gardeniaApi = GardeniaApi.getInstance();
     Plant plant;
     TextView tv_product_details_title,
             tv_product_details_price,
@@ -31,11 +35,12 @@ public class PlantDetailsActivity extends AppCompatActivity {
             tv_description
                     ;
     ImageView image;
-
+    Button btn_add_to_cart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plant_details);
+
 
         tv_product_details_title = findViewById(R.id.tv_product_details_title);
         tv_product_details_price = findViewById(R.id.tv_product_details_price);
@@ -45,11 +50,22 @@ public class PlantDetailsActivity extends AppCompatActivity {
         tv_fertilization = findViewById(R.id.tv_fertilization);
         tv_description = findViewById(R.id.tv_product_details_description);
         image = findViewById(R.id.iv_product_detail_image);
+        btn_add_to_cart = findViewById(R.id.btn_add_to_cart);
 
 
+        btn_add_to_cart.setOnClickListener(view -> {
+            //Add plant to cart list
+            gardeniaApi.addPlantToCart();
+            //go to cart activity
+            startActivity(new Intent(PlantDetailsActivity.this,CartListActivity.class));
+        });
 
-        plant = GardeniaApi.getClickedPlant();
 
+        plant = gardeniaApi.getClickedPlant();
+
+        /**
+         * Load and show clicked plant Informationnnnn
+         */
         tv_product_details_title.setText(plant.getName());
         tv_product_details_price.setText(plant.getPrice());
         tv_plant_height.setText(plant.getPlant_height());
@@ -58,13 +74,15 @@ public class PlantDetailsActivity extends AppCompatActivity {
         tv_fertilization.setText(plant.getFertilization());
         tv_description.setText(plant.getDescription());
 
-
+        /**
+         * Load and show clicked plant Imageeeeeeeee
+         */
         FirebaseStorage storage = FirebaseStorage.getInstance();
 
         // Create a storage reference from our app
         StorageReference storageRef = storage.getReference();
 
-        StorageReference load = storageRef.child(plant.getPlant_view_img());
+        StorageReference load = storageRef.child("PlantViewImg").child(plant.getPlant_view_img());
 
         load.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override

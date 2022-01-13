@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:1-42:12
 MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\Ameer\.gradle\caches\transforms-3\941a36871591fef799a9f42c35752987\transformed\navigation-ui-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\Ameer\.gradle\caches\transforms-3\0e6ea703f67d1048959f20a42bed1ff1\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\Ameer\.gradle\caches\transforms-3\f28733b2caf9719f022d92101d6c5f89\transformed\constraintlayout-2.1.1\AndroidManifest.xml:2:1-11:12
@@ -68,25 +68,25 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Ameer\.gradle\ca
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Ameer\.gradle\caches\transforms-3\8d02c07292f15bebcd0b4268f1f8c6f6\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Ameer\.gradle\caches\transforms-3\eafa9c8ee92fe4e7e27ab3a6c30a9c03\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.41.0] C:\Users\Ameer\.gradle\caches\transforms-3\4d0bffd9be23972cf6ae91adad232059\transformed\jetified-grpc-android-1.41.0\AndroidManifest.xml:2:1-13:12
-INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:1-42:12
 	package
 		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:3:5-36
 		INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml
 		INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml
-		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:1-42:12
 		INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml
-		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:1-42:12
 		INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:5:5-31:19
+ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:5:5-40:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\Ameer\.gradle\caches\transforms-3\0e6ea703f67d1048959f20a42bed1ff1\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\Ameer\.gradle\caches\transforms-3\0e6ea703f67d1048959f20a42bed1ff1\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\Ameer\.gradle\caches\transforms-3\f28733b2caf9719f022d92101d6c5f89\transformed\constraintlayout-2.1.1\AndroidManifest.xml:9:5-20
@@ -135,40 +135,58 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Am
 		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:12:9-52
 	android:fullBackupOnly
 		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:7:9-38
-activity#com.ameerdev.gardenia.ui.PlantDetailsActivity
+activity#com.ameerdev.gardenia.ui.OutdoorActivity
 ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:13:9-15:40
 	android:exported
 		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:15:13-37
 	android:name
-		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:14:13-52
-activity#com.ameerdev.gardenia.RegisterActivity
+		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:14:13-47
+activity#com.ameerdev.gardenia.ui.IndoorActivity
 ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:16:9-18:40
 	android:exported
 		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:18:13-37
 	android:name
-		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:17:13-45
-activity#com.ameerdev.gardenia.MainActivity
-ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:19:9-27:20
+		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:17:13-46
+activity#com.ameerdev.gardenia.ui.CartListActivity
+ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:19:9-21:40
 	android:exported
-		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:21:13-36
+		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:21:13-37
 	android:name
-		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:20:13-41
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:22:13-26:29
-action#android.intent.action.MAIN
-ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:23:17-69
+		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:20:13-48
+activity#com.ameerdev.gardenia.ui.PlantDetailsActivity
+ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:22:9-24:40
+	android:exported
+		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:23:25-66
-category#android.intent.category.LAUNCHER
-ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:25:17-77
+		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:23:13-52
+activity#com.ameerdev.gardenia.RegisterActivity
+ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:25:9-27:40
+	android:exported
+		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:25:27-74
-activity#com.ameerdev.gardenia.LoginActivity
-ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:28:9-30:39
+		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:26:13-45
+activity#com.ameerdev.gardenia.MainActivity
+ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:28:9-36:20
 	android:exported
 		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:30:13-36
 	android:name
-		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:29:13-42
+		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:29:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:31:13-35:29
+action#android.intent.action.MAIN
+ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:32:17-69
+	android:name
+		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:32:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:34:17-77
+	android:name
+		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:34:27-74
+activity#com.ameerdev.gardenia.LoginActivity
+ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:37:9-39:39
+	android:exported
+		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:39:13-36
+	android:name
+		ADDED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml:38:13-42
 uses-sdk
 INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\GitHub\Gardenia\app\src\main\AndroidManifest.xml
