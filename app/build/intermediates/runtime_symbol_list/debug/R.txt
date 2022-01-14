@@ -2170,6 +2170,7 @@ int id action_bar_title 0x7f080036
 int id action_container 0x7f080037
 int id action_context_bar 0x7f080038
 int id action_divider 0x7f080039
+int id action_homeFragment2_to_gardenFragment 0x7f080245
 int id action_image 0x7f08003a
 int id action_menu_divider 0x7f08003b
 int id action_menu_presenter 0x7f08003c
@@ -3758,6 +3759,7 @@ int style Widget_MaterialComponents_Toolbar_PrimarySurface 0x7f1002d8
 int style Widget_MaterialComponents_Toolbar_Surface 0x7f1002d9
 int style Widget_MaterialComponents_Tooltip 0x7f1002da
 int style Widget_Support_CoordinatorLayout 0x7f1001fc
+int style mat 0x7f1002db
 int[] styleable ActionBar { 0x7f03003f, 0x7f030040, 0x7f030041, 0x7f0300c8, 0x7f0300c9, 0x7f0300ca, 0x7f0300cb, 0x7f0300cc, 0x7f0300cd, 0x7f0300e5, 0x7f0300f6, 0x7f0300f7, 0x7f030110, 0x7f030153, 0x7f030158, 0x7f03015d, 0x7f03015e, 0x7f030160, 0x7f030172, 0x7f03017c, 0x7f0301e3, 0x7f03020f, 0x7f030239, 0x7f03023d, 0x7f03023e, 0x7f030289, 0x7f03028c, 0x7f0302e5, 0x7f0302ef }
 int styleable ActionBar_background 0
 int styleable ActionBar_backgroundSplit 1

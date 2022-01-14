@@ -22,10 +22,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/AppTheme.NoActionBar" >
+        android:theme="@style/AppTheme" >
         <activity
-            android:name="com.ameerdev.gardenia.LoginActivity"
-            android:exported="true" >
+            android:name="com.ameerdev.gardenia.MainActivity"
+            android:exported="true"
+            android:theme="@style/mat" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,22 +35,28 @@
         </activity>
         <activity
             android:name="com.ameerdev.gardenia.ui.OutdoorActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.ameerdev.gardenia.ui.IndoorActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.ameerdev.gardenia.ui.CartListActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.ameerdev.gardenia.ui.PlantDetailsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.ameerdev.gardenia.RegisterActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/mat" />
         <activity
-            android:name="com.ameerdev.gardenia.MainActivity"
-            android:exported="true" />
+            android:name="com.ameerdev.gardenia.LoginActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"
