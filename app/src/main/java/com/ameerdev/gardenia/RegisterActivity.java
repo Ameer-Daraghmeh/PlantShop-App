@@ -40,7 +40,8 @@ public class RegisterActivity extends AppCompatActivity {
      */
     private FirebaseAuth firebaseAuth;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private CollectionReference collectionReference = db.collection("Users");
+    private CollectionReference collectionReference =
+            db.collection("Users");
     private FirebaseUser currentUser;
 
 
@@ -134,9 +135,9 @@ public class RegisterActivity extends AppCompatActivity {
                                                             if (Objects.requireNonNull(task.getResult()).exists()) {
                                                                 progressBar.setVisibility(View.INVISIBLE);
 
-//                                                                GardeniaApi gardeniaApi = GardeniaApi.getInstance(); //Global API
-//                                                                gardeniaApi.setUserId(currentUserId);
-//                                                                gardeniaApi.setUsername(username);
+                                                                GardeniaApi gardeniaApi = GardeniaApi.getInstance(); //Global API
+                                                                gardeniaApi.setUserId(currentUserId);
+                                                                gardeniaApi.setUsername(username);
 
                                                                 Intent intent = new Intent(RegisterActivity.this,
                                                                         MainActivity.class);

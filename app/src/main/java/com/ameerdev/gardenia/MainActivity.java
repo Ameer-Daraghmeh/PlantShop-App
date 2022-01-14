@@ -1,25 +1,21 @@
 package com.ameerdev.gardenia;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.ameerdev.gardenia.fragments.DiagnoseFragment;
 import com.ameerdev.gardenia.fragments.GardenFragment;
 import com.ameerdev.gardenia.fragments.HomeFragment;
-import com.ameerdev.gardenia.ui.CartListActivity;
+import com.ameerdev.gardenia.fragments.MoreFragment;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-
 import com.google.firebase.firestore.FirebaseFirestore;
-
 
 
 public class MainActivity extends AppCompatActivity{
@@ -36,6 +32,7 @@ public class MainActivity extends AppCompatActivity{
     private static final HomeFragment homeFragment = new HomeFragment();
     private static final GardenFragment gardenFragment = new GardenFragment();
     private static final DiagnoseFragment diagnoseFragment = new DiagnoseFragment();
+    private static final MoreFragment moreFragment = new MoreFragment();
 
 
     @Override
@@ -88,8 +85,10 @@ public class MainActivity extends AppCompatActivity{
                                 replace(R.id.fragmentContainer,diagnoseFragment).commit();
                 bottomNavigationView.getMenu().findItem(R.id.diagnoseFragment).setChecked(true);
                         break;
-            case R.id.more:
-               startActivity(new Intent(MainActivity.this, CartListActivity.class));
+            case R.id.moreFragment:
+                getSupportFragmentManager().beginTransaction().
+                        replace(R.id.fragmentContainer,moreFragment).commit();
+                bottomNavigationView.getMenu().findItem(R.id.moreFragment).setChecked(true);
                 break;
                 }
 

@@ -17,6 +17,9 @@ public class GardeniaApi extends Application {
     private static GardeniaApi instance;
     private  Plant clickedPlant;
     private ArrayList<Plant>cartList = new ArrayList<>();
+
+
+
     public static GardeniaApi getInstance() {
         if (instance == null)
             instance = new GardeniaApi();

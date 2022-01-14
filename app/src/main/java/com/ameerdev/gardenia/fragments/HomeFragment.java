@@ -1,6 +1,7 @@
 package com.ameerdev.gardenia.fragments;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -22,10 +23,15 @@ import com.ameerdev.gardenia.ui.CartListActivity;
 import com.ameerdev.gardenia.ui.IndoorActivity;
 import com.ameerdev.gardenia.ui.OutdoorActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -34,13 +40,15 @@ public class HomeFragment extends Fragment {
 
 
     private static final ArrayList<Plant> plantList= new ArrayList<Plant>();
-    private RecyclerView mRecyclerView;
-    private PlantRecyclerViewAdapter mAdapter;
+    private static RecyclerView mRecyclerView;
+    private static PlantRecyclerViewAdapter mAdapter;
 
-    private static HomeFragment instance;
+    static FirebaseStorage storage = FirebaseStorage.getInstance();
+    static StorageReference storageRef = storage.getReference();
+
     Button btn_cart;
-
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    StorageReference load;
+    private static FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     static int count = 0;
 
@@ -49,6 +57,7 @@ public class HomeFragment extends Fragment {
 
     public HomeFragment() {
         // Required empty public constructor
+        getPlantList();
     }
 
 
@@ -56,7 +65,12 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-
+        mRecyclerView = view.findViewById(R.id.mostpop_plant_rv);
+        mAdapter = new PlantRecyclerViewAdapter(plantList,this.getContext());
+        mRecyclerView.setAdapter(mAdapter);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        mRecyclerView.setLayoutManager(linearLayoutManager);
+        mRecyclerView.setHasFixedSize(true);
 
         /**
          * Indoor and out door image view click
@@ -84,12 +98,7 @@ public class HomeFragment extends Fragment {
         mAdapter = new PlantRecyclerViewAdapter(plantList,this.getContext());
 
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
 
-        mRecyclerView.setAdapter(mAdapter);
-
-        mRecyclerView.setLayoutManager(linearLayoutManager);
-        mRecyclerView.setHasFixedSize(true);
 
        //mRecyclerView.setAdapter(mAdapter);
        //mRecyclerView.suppressLayout(true);
@@ -114,10 +123,23 @@ public class HomeFragment extends Fragment {
 
                                     Plant plant = plants.toObject(Plant.class);
 
+                                    load = storageRef.child("PlantProfileImg").child(plant.getPlant_profile_img());
+
+                                    load.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                        @Override
+                                        public void onSuccess(Uri uri) {
+                                            // Got the download URL for 'users/me/profile.png'
+                                            // Pass it to Picasso to download, show in ImageView and caching
+                                            plant.setUri(uri.toString());
+                                            mAdapter.notifyDataSetChanged();
+                                        }
+                                    }).addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception exception) {
+                                            // Handle any errors
+                                        }
+                                    });
                                     plantList.add(plant);
-
-
-                                    mAdapter.notifyDataSetChanged();
 
 
                                 }
@@ -134,7 +156,6 @@ public class HomeFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        getPlantList();
 
     }
 }

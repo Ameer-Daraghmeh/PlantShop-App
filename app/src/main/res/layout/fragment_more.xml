@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MoreFragment">
+
+    <LinearLayout
+        android:id="@+id/plant_height"
+        android:layout_width="match_parent"
+        android:layout_marginTop="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/ll_bottom_border"
+        >
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textSize="20sp"
+            android:padding="15dp"
+            android:fontFamily="sans-serif"
+            android:drawableLeft="@drawable/ic_profile"
+            />
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Settings"
+            android:padding="15dp"
+
+            android:textSize="20sp"
+            android:fontFamily="sans-serif"
+            android:drawableLeft="@drawable/ic_settings"
+            />
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Logout"
+            android:padding="15dp"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif"
+            android:drawableLeft="@drawable/ic_logout"
+            />
+
+
+    </LinearLayout>
+
+</FrameLayout>

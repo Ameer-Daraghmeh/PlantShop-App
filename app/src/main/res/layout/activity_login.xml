@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context=".LoginActivity">
+    tools:context=".MainActivity">
 
     <FrameLayout
         android:id="@+id/fl_header_image"
@@ -19,21 +19,21 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:src="@drawable/auth_screens_background"
             android:contentDescription="@string/content_description"
             android:scaleType="fitXY"
-            android:src="@drawable/auth_screens_background" />
+            />
 
         <ImageView
             android:layout_width="247dp"
             android:layout_height="123dp"
             android:layout_gravity="center"
+            android:src="@drawable/plant_logo"
             android:contentDescription="@string/app_name"
             android:scaleType="fitCenter"
-            android:src="@drawable/plant_logo"
             app:tint="@color/colorWhite" />
-
-
     </FrameLayout>
+
     <ProgressBar
         android:id="@+id/create_acct_progress"
         style="?android:attr/progressBarStyleLarge"
@@ -130,7 +130,6 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="#248a69"
-        android:foreground="?attr/selectableItemBackground"
         android:gravity="center"
         android:paddingTop="@dimen/btn_padding"
         android:paddingBottom="@dimen/btn_padding"

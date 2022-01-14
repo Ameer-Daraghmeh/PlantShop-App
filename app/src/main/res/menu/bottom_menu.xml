@@ -16,7 +16,7 @@
         android:title="Diagnose" />
 
     <item
-        android:id="@+id/more"
+        android:id="@+id/moreFragment"
         android:icon="@drawable/noun_more_4119183"
         android:title="More" />
 </menu>

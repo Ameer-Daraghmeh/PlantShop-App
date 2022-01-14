@@ -19,4 +19,9 @@
         android:name="com.ameerdev.gardenia.fragments.DiagnoseFragment"
         android:label="fragment_diagnose"
         tools:layout="@layout/fragment_diagnose" />
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.ameerdev.gardenia.fragments.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" />
 </navigation>

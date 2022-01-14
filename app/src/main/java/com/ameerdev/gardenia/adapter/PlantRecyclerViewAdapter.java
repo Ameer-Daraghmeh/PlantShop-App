@@ -34,7 +34,7 @@ import com.squareup.picasso.Picasso;
 
 public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecyclerViewAdapter.PlantViewHolder>{
 
-    private ArrayList<Plant> plantList = new ArrayList<>() ;
+    private static ArrayList<Plant> plantList = new ArrayList<>() ;
     Context context;
 
 
@@ -121,25 +121,11 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
             plant_name.setText(plant.getName());
             plant_price.setText(plant.getPrice());
 
-//            load = storageRef.child("PlantProfileImg").child(plant.getPlant_profile_img());
-//
-//            load.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-//                @Override
-//                public void onSuccess(Uri uri) {
-//                    // Got the download URL for 'users/me/profile.png'
-//                    // Pass it to Picasso to download, show in ImageView and caching
-//                    Picasso.get()
-//                            .load(uri.toString())
-//                            .placeholder(R.drawable.plant_img)
-//                            .fit()
-//                            .into(PlantViewHolder.plant_img);
-//                }
-//            }).addOnFailureListener(new OnFailureListener() {
-//                @Override
-//                public void onFailure(@NonNull Exception exception) {
-//                    // Handle any errors
-//                }
-//            });
+            Picasso.get()
+                    .load(plant.getUri())
+                    .placeholder(R.drawable.plant_img)
+                    .fit()
+                    .into(plant_img);
 
 
         }
