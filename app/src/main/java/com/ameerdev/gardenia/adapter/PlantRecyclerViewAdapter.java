@@ -2,10 +2,6 @@ package com.ameerdev.gardenia.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,35 +14,24 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.ameerdev.gardenia.R;
 import com.ameerdev.gardenia.models.Plant;
 import com.ameerdev.gardenia.ui.PlantDetailsActivity;
+import com.squareup.picasso.Picasso;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
 import util.GardeniaApi;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.squareup.picasso.Picasso;
-
-
 public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecyclerViewAdapter.PlantViewHolder>{
 
-    private static ArrayList<Plant> plantList = new ArrayList<>() ;
+    private  ArrayList<Plant> plantList = new ArrayList<>() ;
     Context context;
-
 
 
     public PlantRecyclerViewAdapter(ArrayList<Plant> plantList, Context context) {
         this.plantList = plantList;
         this.context = context;
 
-
     }
-
-
 
     @NonNull
     @Override
@@ -75,11 +60,10 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
                 GardeniaApi gardeniaApi = GardeniaApi.getInstance();
                 gardeniaApi.setClickedPlant(plantList.get(holder.getAdapterPosition()));
 
-                Intent intent = new Intent(context , PlantDetailsActivity.class);
+                Intent intent = new Intent(context ,PlantDetailsActivity.class);
                 context.startActivity(intent);
 
             }});
-
     }
 
     @Override
@@ -97,10 +81,7 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
         private ImageView plant_img;
         private final Context context;
         private TextView plant_name, plant_price;
-        FirebaseStorage storage = FirebaseStorage.getInstance();
-        StorageReference storageRef = storage.getReference();
         View mView;
-        StorageReference  load;
 
 
         public PlantViewHolder(@NonNull View itemView) {
@@ -114,7 +95,6 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
             context = itemView.getContext();
             mView = itemView;
 
-
         }
 
         public void bindPlant(Plant plant) throws IOException {
@@ -126,11 +106,9 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
                     .placeholder(R.drawable.plant_img)
                     .fit()
                     .into(plant_img);
-
-
         }
 
-        public void loadPlantImg(Plant plant) {
+       // public void loadPlantImg(Plant plant) {
 
 //            StorageReference islandRef = storageRef.child("PlantProfileImg").child(plant.getPlant_profile_img());
 //
@@ -139,7 +117,7 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
 //                @Override
 //                public void onSuccess(byte[] bytes) {
 //                    // Data for "images/island.jpg" is returns, use this as needed
-//                    Bitmap bmp = BitmapFactory.decodeByteArray(bytes,0,bytes.length);
+//                    Bitmap bmp = BitmapFactry.decodeByteArray(bytes,0,bytes.length);
 //                    plant_img.setImageBitmap(bmp);
 //                }
 //            }).addOnFailureListener(new OnFailureListener() {
@@ -149,15 +127,10 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
 //                }
 //            });
 
-        }
-
-
+      //  }
         @Override
         public void onClick(View view) {
 
-
         }
     }
-
-
 }

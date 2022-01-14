@@ -1,6 +1,5 @@
 package com.ameerdev.gardenia;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -11,7 +10,6 @@ import com.ameerdev.gardenia.fragments.DiagnoseFragment;
 import com.ameerdev.gardenia.fragments.GardenFragment;
 import com.ameerdev.gardenia.fragments.HomeFragment;
 import com.ameerdev.gardenia.fragments.MoreFragment;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -20,20 +18,14 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity{
 
-
-
     private BottomNavigationView bottomNavigationView;
-
     private FirebaseAuth mAuth;
-
-
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     private static final HomeFragment homeFragment = new HomeFragment();
     private static final GardenFragment gardenFragment = new GardenFragment();
     private static final DiagnoseFragment diagnoseFragment = new DiagnoseFragment();
     private static final MoreFragment moreFragment = new MoreFragment();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +35,6 @@ public class MainActivity extends AppCompatActivity{
 //          mAuth = FirebaseAuth.getInstance();
 //          FirebaseUser user = mAuth.getCurrentUser();
 //          assert user!=null;
-
-
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -58,15 +48,8 @@ public class MainActivity extends AppCompatActivity{
 
     }
 
-
-
-
-
-
-
 //Nav bar for fragments
     public void navItemSelected(@NonNull MenuItem item) {
-
 
         switch(item.getItemId()){
             case R.id.homeFragment:

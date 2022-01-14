@@ -29,7 +29,7 @@ public class IndoorActivity extends AppCompatActivity {
 
     private static final ArrayList<Plant> plantList= new ArrayList<>();
     private RecyclerView mRecyclerView;
-    private PlantRecyclerViewAdapter mAdapter;
+    private  PlantRecyclerViewAdapter mAdapter ;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     static FirebaseStorage storage = FirebaseStorage.getInstance();
     static StorageReference storageRef = storage.getReference();
@@ -42,13 +42,13 @@ public class IndoorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_indoor);
         getPlantList();
-        mRecyclerView = findViewById(R.id.rv_indoor);
         mAdapter = new PlantRecyclerViewAdapter(plantList,this);
+
+        mRecyclerView = findViewById(R.id.rv_indoor);
         mRecyclerView.setAdapter(mAdapter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(linearLayoutManager);
         mRecyclerView.setHasFixedSize(true);
-
 
     }
     void getPlantList(){
@@ -63,19 +63,15 @@ public class IndoorActivity extends AppCompatActivity {
 
                             if (task.isSuccessful()) {
                                 for (QueryDocumentSnapshot plants : task.getResult()) {
-                                    //Log.d("suuu", document.getId() + " => " + document.getData());
 
                                     Plant plant = plants.toObject(Plant.class);
-
+                                    //Retrieve Plant Image
                                     load = storageRef.child("PlantProfileImg").child(plant.getPlant_profile_img());
-
                                     load.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                         @Override
                                         public void onSuccess(Uri uri) {
-                                            // Got the download URL for 'users/me/profile.png'
-                                            // Pass it to Picasso to download, show in ImageView and caching
+                                            // Got the download URL
                                             plant.setUri(uri.toString());
-                                            mAdapter.notifyDataSetChanged();
                                         }
                                     }).addOnFailureListener(new OnFailureListener() {
                                         @Override
@@ -83,9 +79,9 @@ public class IndoorActivity extends AppCompatActivity {
                                             // Handle any errors
                                         }
                                     });
+                                    //Store Plant object and view in adapter
                                     plantList.add(plant);
-
-
+                                    mAdapter.notifyDataSetChanged();
                                 }
                             } else {
                                 Log.d("suuu", "Error getting documents.", task.getException());

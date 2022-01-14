@@ -47,7 +47,8 @@ public class CartListActivity extends AppCompatActivity {
      int shipping = 10;
      int total = 0;
 
-    ArrayList<Plant>cartList = new ArrayList<>();
+    static ArrayList<Plant>cartList = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

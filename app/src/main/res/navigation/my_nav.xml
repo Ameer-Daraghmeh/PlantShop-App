@@ -8,7 +8,11 @@
         android:id="@+id/homeFragment2"
         android:name="com.ameerdev.gardenia.fragments.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_gardenFragment"
+            app:destination="@id/gardenFragment" />
+    </fragment>
     <fragment
         android:id="@+id/gardenFragment"
         android:name="com.ameerdev.gardenia.fragments.GardenFragment"

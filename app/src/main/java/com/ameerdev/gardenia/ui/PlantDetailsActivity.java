@@ -1,16 +1,14 @@
 package com.ameerdev.gardenia.ui;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.ameerdev.gardenia.R;
 import com.ameerdev.gardenia.models.Plant;
@@ -41,7 +39,7 @@ public class PlantDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plant_details);
 
-
+        plant = gardeniaApi.getClickedPlant();
         tv_product_details_title = findViewById(R.id.tv_product_details_title);
         tv_product_details_price = findViewById(R.id.tv_product_details_price);
         tv_plant_height = findViewById(R.id.tv_plant_height);
@@ -51,32 +49,6 @@ public class PlantDetailsActivity extends AppCompatActivity {
         tv_description = findViewById(R.id.tv_product_details_description);
         image = findViewById(R.id.iv_product_detail_image);
         btn_add_to_cart = findViewById(R.id.btn_add_to_cart);
-
-
-        btn_add_to_cart.setOnClickListener(view -> {
-            //Add plant to cart list
-            gardeniaApi.addPlantToCart();
-            //go to cart activity
-            startActivity(new Intent(PlantDetailsActivity.this,CartListActivity.class));
-        });
-
-
-        plant = gardeniaApi.getClickedPlant();
-
-        /**
-         * Load and show clicked plant Informationnnnn
-         */
-        tv_product_details_title.setText(plant.getName());
-        tv_product_details_price.setText(plant.getPrice());
-        tv_plant_height.setText(plant.getPlant_height());
-        tv_sun_light.setText(plant.getSun_light());
-        tv_water.setText(plant.getWater());
-        tv_fertilization.setText(plant.getFertilization());
-        tv_description.setText(plant.getDescription());
-
-        /**
-         * Load and show clicked plant Imageeeeeeeee
-         */
         FirebaseStorage storage = FirebaseStorage.getInstance();
 
         // Create a storage reference from our app
@@ -97,6 +69,30 @@ public class PlantDetailsActivity extends AppCompatActivity {
                 // Handle any errors
             }
         });
+
+
+        btn_add_to_cart.setOnClickListener(view -> {
+            //Add plant to cart list
+            gardeniaApi.addPlantToCart();
+            //go to cart activity
+            startActivity(new Intent(PlantDetailsActivity.this,CartListActivity.class));
+        });
+
+        /**
+         * Load and show clicked plant Informationnnnn
+         */
+        tv_product_details_title.setText(plant.getName());
+        tv_product_details_price.setText(plant.getPrice());
+        tv_plant_height.setText(plant.getPlant_height());
+        tv_sun_light.setText(plant.getSun_light());
+        tv_water.setText(plant.getWater());
+        tv_fertilization.setText(plant.getFertilization());
+        tv_description.setText(plant.getDescription());
+
+        /**
+         * Load and show clicked plant Imageeeeeeeee
+         */
+
 
 
     }

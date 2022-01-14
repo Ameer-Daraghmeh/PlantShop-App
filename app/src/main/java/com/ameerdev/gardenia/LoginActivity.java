@@ -41,8 +41,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
-
         progressBar = findViewById(R.id.create_acct_progress);
 
         mAuth = FirebaseAuth.getInstance();

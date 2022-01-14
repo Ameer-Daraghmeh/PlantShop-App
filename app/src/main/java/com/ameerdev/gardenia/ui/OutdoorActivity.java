@@ -48,7 +48,6 @@ public class OutdoorActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(linearLayoutManager);
         mRecyclerView.setHasFixedSize(true);
 
-
     }
     void getPlantList(){
 
