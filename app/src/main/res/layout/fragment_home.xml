@@ -25,8 +25,9 @@
             android:id="@+id/btn_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:background="@color/colorImageViewBackground"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/et_search_img_bg"
+            android:backgroundTint="@color/colorImageViewBackground"
             android:padding="10dp"
             android:src="@drawable/ic_search" />
 

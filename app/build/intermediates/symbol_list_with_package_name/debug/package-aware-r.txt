@@ -1997,6 +1997,7 @@ drawable abc_vector_test
 drawable android_logo_img_plant
 drawable app_gradient_color_background
 drawable auth_screens_background
+drawable auto_diagnose_bg
 drawable avd_hide_password
 drawable avd_show_password
 drawable btn_checkbox_checked_mtrl
@@ -2032,6 +2033,8 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable et_search_bg
+drawable et_search_img_bg
+drawable expert_diagnose
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_3vdots

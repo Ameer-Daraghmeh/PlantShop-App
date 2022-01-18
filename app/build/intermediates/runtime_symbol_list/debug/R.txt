@@ -1996,6 +1996,7 @@ int drawable abc_vector_test 0x7f070055
 int drawable android_logo_img_plant 0x7f070056
 int drawable app_gradient_color_background 0x7f070057
 int drawable auth_screens_background 0x7f070058
+int drawable auto_diagnose_bg 0x7f0700cd
 int drawable avd_hide_password 0x7f070059
 int drawable avd_show_password 0x7f07005a
 int drawable btn_checkbox_checked_mtrl 0x7f07005b
@@ -2031,6 +2032,8 @@ int drawable design_ic_visibility_off 0x7f070078
 int drawable design_password_eye 0x7f070079
 int drawable design_snackbar_background 0x7f07007a
 int drawable et_search_bg 0x7f0700cc
+int drawable et_search_img_bg 0x7f0700cf
+int drawable expert_diagnose 0x7f0700ce
 int drawable googleg_disabled_color_18 0x7f07007b
 int drawable googleg_standard_color_18 0x7f07007c
 int drawable ic_3vdots 0x7f07007d
