@@ -26,19 +26,25 @@
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/add_to_cart.xml" value="0.3828125" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/android_logo_img_plant.xml" value="0.1638888888888889" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/app_gradient_color_background.xml" value="0.1712962962962963" />
+        <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/et_search_bg.xml" value="0.2203125" />
+        <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/ic_3vdots.xml" value="0.2203125" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/ic_arrow_right.xml" value="0.28703703703703703" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/ic_fertilizer.xml" value="0.35648148148148145" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/ic_launcher_background2.xml" value="0.3828125" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.28703703703703703" />
+        <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/ic_logout.xml" value="0.2203125" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/ic_noun_sun_1144449.xml" value="0.35648148148148145" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/ic_plant_desc.xml" value="0.3828125" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/ic_plantchar.xml" value="0.35648148148148145" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/ic_planthight.xml" value="0.35648148148148145" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/ic_search.xml" value="0.28703703703703703" />
+        <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/ic_sun_my_plant.xml" value="0.2203125" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/ic_sunlight.xml" value="0.35648148148148145" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/ic_water.xml" value="0.35648148148148145" />
+        <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/ic_water_my_plant.xml" value="0.2203125" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/icons8_home.xml" value="0.2203125" />
+        <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/item_dashboard_background.xml" value="0.2169230769230769" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/item_grey_border.xml" value="0.2203125" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/item_grey_border_background.xml" value="0.1712962962962963" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/drawable/ll_bottom_border.xml" value="0.28703703703703703" />
@@ -61,12 +67,13 @@
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/layout/activity_register.xml" value="0.33" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/layout/cart_item_row.xml" value="0.36666666666666664" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/layout/dimens.xml" value="0.36666666666666664" />
-        <entry key="..\:/GitHub/Gardenia/app/src/main/res/layout/fragment_diagnose.xml" value="0.36666666666666664" />
-        <entry key="..\:/GitHub/Gardenia/app/src/main/res/layout/fragment_garden.xml" value="0.36666666666666664" />
-        <entry key="..\:/GitHub/Gardenia/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/GitHub/Gardenia/app/src/main/res/layout/fragment_diagnose.xml" value="0.33" />
+        <entry key="..\:/GitHub/Gardenia/app/src/main/res/layout/fragment_garden.xml" value="0.25" />
+        <entry key="..\:/GitHub/Gardenia/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/layout/fragment_more.xml" value="0.36666666666666664" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/layout/ic_launcher_background.xml" value="0.35260416666666666" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/layout/plant_row.xml" value="0.33" />
+        <entry key="..\:/GitHub/Gardenia/app/src/main/res/layout/plant_row_my_plants.xml" value="0.25" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/menu/bottom_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/menu/btn_more_navbar.xml" value="0.36666666666666664" />
         <entry key="..\:/GitHub/Gardenia/app/src/main/res/mipmap-anydpi-v26/palor_palm_ppimg.xml" value="0.253125" />

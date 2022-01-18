@@ -48,7 +48,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:id="@+id/tv_cart_item_price"
@@ -61,54 +62,7 @@
                 android:textStyle="bold"
                 tools:text="$100" />
 
-            <LinearLayout
-                android:id="@+id/ll_update_cart_quantity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/update_cart_quantity_marginStart"
-                android:layout_marginEnd="@dimen/update_cart_quantity_marginEnd"
-                android:layout_toEndOf="@id/tv_cart_item_price"
-                android:gravity="end"
-                android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/ib_remove_cart_item"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/ib_remove_cart_item_marginStartEnd"
-                    android:layout_marginEnd="@dimen/ib_remove_cart_item_marginStartEnd"
-                    android:background="@android:color/transparent"
-                    android:contentDescription="@string/content_description"
-                    android:foreground="?attr/selectableItemBackgroundBorderless"
-                    android:padding="@dimen/ib_cart_item_padding"
-                    android:src="@drawable/ic_vector_remove" />
-
-                <TextView
-                    android:id="@+id/tv_cart_quantity"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/item_grey_border_background"
-                    android:paddingStart="@dimen/cart_quantity_paddingStartEnd"
-                    android:paddingTop="@dimen/cart_quantity_paddingTopBottom"
-                    android:paddingEnd="@dimen/cart_quantity_paddingStartEnd"
-                    android:paddingBottom="@dimen/cart_quantity_paddingTopBottom"
-                    android:textColor="@color/colorSecondaryText"
-                    android:textSize="@dimen/cart_quantity_textSize"
-                    android:textStyle="bold"
-                    android:text="1" />
-
-                <ImageButton
-                    android:id="@+id/ib_add_cart_item"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/ib_add_cart_item_marginStart"
-                    android:layout_marginEnd="@dimen/ib_add_cart_item_marginEnd"
-                    android:background="@android:color/transparent"
-                    android:contentDescription="@string/content_description"
-                    android:foreground="?attr/selectableItemBackgroundBorderless"
-                    android:padding="@dimen/ib_cart_item_padding"
-                    android:src="@drawable/ic_vector_add" />
-            </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
 

@@ -20,6 +20,10 @@
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\app_gradient_color_background.xml"
     },
     {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_3vdots.xml.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\ic_3vdots.xml"
+    },
+    {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
@@ -102,6 +106,10 @@
     {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_nav_bar_bg.xml.flat",
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\nav_bar_bg.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_et_search_bg.xml.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\et_search_bg.xml"
     },
     {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\navigation_my_nav.xml.flat",
@@ -204,6 +212,10 @@
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\noun_medicine_bag_2222602.xml"
     },
     {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\layout_plant_row_my_plants.xml.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\layout\\plant_row_my_plants.xml"
+    },
+    {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_plant_page_button.xml.flat",
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\plant_page_button.xml"
     },
@@ -236,6 +248,10 @@
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\ic_plant_desc.xml"
     },
     {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_sun_my_plant.xml.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\ic_sun_my_plant.xml"
+    },
+    {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_settings.xml.flat",
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\ic_settings.xml"
     },
@@ -258,6 +274,10 @@
     {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_palor_palm_ppimg.png.flat",
         "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\mipmap-xhdpi\\palor_palm_ppimg.png"
+    },
+    {
+        "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_water_my_plant.xml.flat",
+        "source": "E:\\GitHub\\Gardenia\\app\\src\\main\\res\\drawable\\ic_water_my_plant.xml"
     },
     {
         "merged": "E:\\GitHub\\Gardenia\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_sunlight.xml.flat",

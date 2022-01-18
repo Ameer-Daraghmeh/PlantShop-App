@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,7 +40,7 @@ public class CartListActivity extends AppCompatActivity {
     TextView tv_no_cart_item_found;
     GardeniaApi gardeniaApi = GardeniaApi.getInstance();
     Button btn_checkout;
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private final FirebaseFirestore db = FirebaseFirestore.getInstance();
     private CollectionReference collectionReference;
 
    TextView tv_subtotal,tv_shipping_charge,tv_total ;
@@ -62,18 +63,21 @@ public class CartListActivity extends AppCompatActivity {
         tv_shipping_charge = findViewById(R.id.tv_shipping_charge);
         tv_total = findViewById(R.id.tv_total_amount);
 
-        cartList = gardeniaApi.getCartList();
+        if (gardeniaApi.getCartList()!=null){
+            cartList = gardeniaApi.getCartList();
+            try{
+                for (int i=0 ; i<cartList.size();i++){
+                    int price =  Integer.parseInt(cartList.get(i).getPrice2());
+                    subtotal+=price;
 
-        try{
-            for (int i=0 ; i<cartList.size();i++){
-                int price =  Integer.parseInt(cartList.get(i).getPrice2());
-                subtotal+=price;
-
+                }
+            }
+            catch (NumberFormatException ex){
+                ex.printStackTrace();
             }
         }
-        catch (NumberFormatException ex){
-            ex.printStackTrace();
-        }
+
+
         total = subtotal+shipping;
 
         String s1= "$"+subtotal+".00";
@@ -89,8 +93,7 @@ public class CartListActivity extends AppCompatActivity {
          */
         btn_checkout.setOnClickListener(view -> {
 
-            if(gardeniaApi.getUserId()!=null){
-
+            if(gardeniaApi.getUserId()!=null && gardeniaApi.getCartList()!=null){
                 collectionReference =
                         db.collection("UserPlants");
 
@@ -99,26 +102,36 @@ public class CartListActivity extends AppCompatActivity {
 
                 for (int i=0 ; i<cartList.size();i++) {
 
-                    userPlantsObj.put(cartList.get(i).getId() ,cartList.get(i).getName());
-                }
-                //save to our Firestore database
-                collectionReference.add(userPlantsObj)
-                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                            @Override
-                            public void onSuccess(DocumentReference documentReference) {
-                                documentReference.get()
-                                        .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                                            @Override
-                                            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                                                if (Objects.requireNonNull(task.getResult()).exists()) {
-                                                    Intent intent = new Intent(CartListActivity.this,
-                                                            MainActivity.class);
-                                                    startActivity(intent);
+                    userPlantsObj.put("name" ,cartList.get(i).getName());
+                    userPlantsObj.put("plant_sun" ,cartList.get(i).getPlant_sun());
+                    userPlantsObj.put("plant_water" ,cartList.get(i).getPlant_water());
+                    userPlantsObj.put("plant_profile_img" ,cartList.get(i).getPlant_profile_img());
+
+                    //save to our Firestore database
+                    collectionReference.add(userPlantsObj)
+                            .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                @Override
+                                public void onSuccess(DocumentReference documentReference) {
+                                    documentReference.get()
+                                            .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                                    if (Objects.requireNonNull(task.getResult()).exists()) {
+                                                        GardeniaApi.getInstance().setCartList(null);
+                                                        Intent intent = new Intent(CartListActivity.this,
+                                                                MainActivity.class);
+                                                        startActivity(intent);
+                                                        Toast.makeText(CartListActivity.this,
+                                                                "Payment Successful, Thank You",Toast.LENGTH_SHORT)
+                                                                .show();
+                                                    }
                                                 }
-                                            }
-                                        });
-                            }
-                        });
+                                            });
+                                }
+                            });
+                }
+                cartList = null;
+
             }
 
 
@@ -129,7 +142,7 @@ public class CartListActivity extends AppCompatActivity {
         /**
          * Show Cart Items if exist
          */
-        if (gardeniaApi.getCartList().size()>0){
+        if (gardeniaApi.getCartList()!=null){
             mAdapter = new CartListAdapter(gardeniaApi.getCartList(), this);
 
             tv_no_cart_item_found.setVisibility(View.GONE);

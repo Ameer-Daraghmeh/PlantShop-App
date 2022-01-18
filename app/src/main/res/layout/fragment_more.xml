@@ -36,6 +36,7 @@
             android:drawableLeft="@drawable/ic_settings"
             />
         <TextView
+            android:id="@+id/tv_logout"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"

@@ -27,16 +27,14 @@ public class GardeniaApi extends Application {
 
     }
 
-
+    public void setCartList(ArrayList<Plant> cartList) {
+        this.cartList = cartList;
+    }
 
     public GardeniaApi(){}
 
     public  ArrayList<Plant> getCartList() {
         return cartList;
-    }
-    public  void showcartlist(){
-
-        Log.d("carlst",cartList.get(0).toString());
     }
 
     public  void addPlantToCart(){

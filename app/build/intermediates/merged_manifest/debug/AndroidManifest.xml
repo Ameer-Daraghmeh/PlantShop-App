@@ -24,9 +24,10 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.ameerdev.gardenia.MainActivity"
+            android:name="com.ameerdev.gardenia.LoginActivity"
             android:exported="true"
-            android:theme="@style/mat" >
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -52,11 +53,12 @@
         <activity
             android:name="com.ameerdev.gardenia.RegisterActivity"
             android:exported="false"
-            android:theme="@style/mat" />
-        <activity
-            android:name="com.ameerdev.gardenia.LoginActivity"
-            android:exported="true"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ameerdev.gardenia.MainActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"

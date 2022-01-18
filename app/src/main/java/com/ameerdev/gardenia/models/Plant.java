@@ -2,12 +2,60 @@ package com.ameerdev.gardenia.models;
 
 public class Plant {
     String name;
-    String water , fertilization , description, plant_height, sun_light;
+    String water ,
+            fertilization ,
+            description,
+            plant_height,
+            sun_light;
     String plant_profile_img;
     String plant_view_img;
     String price;
     String id;
-String uri;
+    String uri;
+    String plant_sun;
+    String plant_water;
+    String type;
+
+    public Plant() {
+        name=null;
+        water=null;
+        fertilization=null;
+        description=null;
+        plant_height=null;
+        sun_light=null;
+        plant_profile_img = null;
+        plant_view_img=null;
+        price=null;
+        id=null;
+        uri=null;
+        plant_sun=null;
+        plant_water=null;
+        type=null;
+    }
+
+    public String getPlant_sun() {
+        return plant_sun;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setPlant_sun(String plant_sun) {
+        this.plant_sun = plant_sun;
+    }
+
+    public String getPlant_water() {
+        return plant_water;
+    }
+
+    public void setPlant_water(String plant_water) {
+        this.plant_water = plant_water;
+    }
 
     public String getUri() {
         return uri;
@@ -23,9 +71,6 @@ String uri;
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public Plant() {
     }
 
     public String getPlant_profile_img() {

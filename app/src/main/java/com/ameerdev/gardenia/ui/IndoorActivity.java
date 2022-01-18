@@ -24,13 +24,14 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class IndoorActivity extends AppCompatActivity {
 
     private static final ArrayList<Plant> plantList= new ArrayList<>();
     private RecyclerView mRecyclerView;
     private  PlantRecyclerViewAdapter mAdapter ;
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private final FirebaseFirestore db = FirebaseFirestore.getInstance();
     static FirebaseStorage storage = FirebaseStorage.getInstance();
     static StorageReference storageRef = storage.getReference();
     static int count = 0;
@@ -41,9 +42,10 @@ public class IndoorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_indoor);
+
         getPlantList();
         mAdapter = new PlantRecyclerViewAdapter(plantList,this);
-
+Log.d("sddd","count"+"->"+count);
         mRecyclerView = findViewById(R.id.rv_indoor);
         mRecyclerView.setAdapter(mAdapter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
@@ -55,7 +57,7 @@ public class IndoorActivity extends AppCompatActivity {
 
         if (count == 0){
             count++;
-            db.collection("Indoor")
+            db.collection("Plants")
                     .get()
                     .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                         @Override
@@ -64,24 +66,25 @@ public class IndoorActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 for (QueryDocumentSnapshot plants : task.getResult()) {
 
-                                    Plant plant = plants.toObject(Plant.class);
-                                    //Retrieve Plant Image
-                                    load = storageRef.child("PlantProfileImg").child(plant.getPlant_profile_img());
-                                    load.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                        @Override
-                                        public void onSuccess(Uri uri) {
+                                    if(Objects.requireNonNull(plants.getData().get("type")).
+                                            toString().equals("indoor"))
+                                    {
+
+                                        Plant plant = plants.toObject(Plant.class);
+
+                                        //Retrieve Plant Image
+                                        load = storageRef.child("PlantProfileImg").child(plant.getPlant_profile_img());
+                                        load.getDownloadUrl().addOnSuccessListener(uri -> {
                                             // Got the download URL
                                             plant.setUri(uri.toString());
-                                        }
-                                    }).addOnFailureListener(new OnFailureListener() {
-                                        @Override
-                                        public void onFailure(@NonNull Exception exception) {
+                                            //Store Plant object and view in adapter
+                                            plantList.add(plant);
+                                            mAdapter.notifyDataSetChanged();
+                                        }).addOnFailureListener(exception -> {
                                             // Handle any errors
-                                        }
-                                    });
-                                    //Store Plant object and view in adapter
-                                    plantList.add(plant);
-                                    mAdapter.notifyDataSetChanged();
+                                        });
+
+                                    }
                                 }
                             } else {
                                 Log.d("suuu", "Error getting documents.", task.getException());

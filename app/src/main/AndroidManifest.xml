@@ -12,8 +12,9 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/mat"
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,11 +41,12 @@
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"
-            android:theme="@style/mat"
+            android:theme="@style/AppTheme.NoActionBar"
             android:exported="false" />
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".MainActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
             android:theme="@style/AppTheme.NoActionBar"
             android:exported="true" />
     </application>

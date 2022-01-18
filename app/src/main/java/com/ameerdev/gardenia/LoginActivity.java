@@ -1,10 +1,12 @@
 package com.ameerdev.gardenia;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -42,6 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         progressBar = findViewById(R.id.create_acct_progress);
+        progressBar.setVisibility(View.GONE);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -110,8 +113,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                                 }
                                             } else {
-                                                Log.d("suuu", "Error getting documents.", task.getException());
-                                            }
+                                                                                          }
                                         }
                                     });
 
@@ -120,8 +122,8 @@ public class LoginActivity extends AppCompatActivity {
                             //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
-                            Log.w("fbauth", "signInWithEmail:failure", task.getException());
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                            progressBar.setVisibility(View.GONE);
+                            Toast.makeText(LoginActivity.this, "Wrong Email or password",
                                     Toast.LENGTH_SHORT).show();
                             //updateUI(null);
                         }

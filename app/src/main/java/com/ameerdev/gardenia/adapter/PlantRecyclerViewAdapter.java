@@ -98,36 +98,15 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
         }
 
         public void bindPlant(Plant plant) throws IOException {
-            plant_name.setText(plant.getName());
-            plant_price.setText(plant.getPrice());
-
             Picasso.get()
                     .load(plant.getUri())
                     .placeholder(R.drawable.plant_img)
                     .fit()
                     .into(plant_img);
+            plant_name.setText(plant.getName());
+            plant_price.setText(plant.getPrice());
         }
 
-       // public void loadPlantImg(Plant plant) {
-
-//            StorageReference islandRef = storageRef.child("PlantProfileImg").child(plant.getPlant_profile_img());
-//
-//            final long ONE_MEGABYTE = 1024 * 1024;
-//            islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
-//                @Override
-//                public void onSuccess(byte[] bytes) {
-//                    // Data for "images/island.jpg" is returns, use this as needed
-//                    Bitmap bmp = BitmapFactry.decodeByteArray(bytes,0,bytes.length);
-//                    plant_img.setImageBitmap(bmp);
-//                }
-//            }).addOnFailureListener(new OnFailureListener() {
-//                @Override
-//                public void onFailure(@NonNull Exception exception) {
-//                    // Handle any errors
-//                }
-//            });
-
-      //  }
         @Override
         public void onClick(View view) {
 

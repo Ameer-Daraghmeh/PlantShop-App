@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
@@ -21,7 +23,9 @@ import com.ameerdev.gardenia.models.Plant;
 import com.ameerdev.gardenia.ui.CartListActivity;
 import com.ameerdev.gardenia.ui.IndoorActivity;
 import com.ameerdev.gardenia.ui.OutdoorActivity;
+import com.ameerdev.gardenia.ui.PlantDetailsActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -32,6 +36,8 @@ import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 
+import util.GardeniaApi;
+
 
 public class HomeFragment extends Fragment {
 
@@ -39,22 +45,20 @@ public class HomeFragment extends Fragment {
     private static final ArrayList<Plant> plantList= new ArrayList<Plant>();
     private RecyclerView mRecyclerView;
     private PlantRecyclerViewAdapter mAdapter;
-
+    ImageButton btn_search;
     static FirebaseStorage storage = FirebaseStorage.getInstance();
     static StorageReference storageRef = storage.getReference();
-
     Button btn_cart;
     StorageReference load;
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-    static int count = 0;
+    private final FirebaseFirestore db = FirebaseFirestore.getInstance();
+    EditText et_search;
+    static  int count = 0;
 
     ImageView iv_indoor;
     ImageView iv_outdoor;
 
     public HomeFragment() {
         // Required empty public constructor
-
     }
 
     @Override
@@ -69,6 +73,30 @@ public class HomeFragment extends Fragment {
         mRecyclerView.setLayoutManager(linearLayoutManager);
         mRecyclerView.setHasFixedSize(true);
 
+        //Implementing Search
+        btn_search = view.findViewById(R.id.btn_search);
+        et_search = view.findViewById(R.id.et_search);
+        btn_search.setOnClickListener(view14 -> {
+
+            String plantName = et_search.getText().toString();
+
+            db.collection("Plants")
+                    .get().addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot plants : task.getResult()) {
+                                Plant plant = plants.toObject(Plant.class);
+                                if (plants.getData().get("name").toString()
+                                        .equals(plantName)){
+
+                                    GardeniaApi.getInstance().setClickedPlant(plant);
+                                    Intent intent = new Intent(getContext() , PlantDetailsActivity.class);
+                                    startActivity(intent);
+                                }
+                            }
+                            }
+                    });
+        });
+
         /**
          * Indoor and out door image view click
          */
@@ -81,27 +109,27 @@ public class HomeFragment extends Fragment {
         });
         iv_outdoor.setOnClickListener(view12 -> {
             startActivity(new Intent(this.getActivity(), OutdoorActivity.class));
-
         });
 
+        /**
+         * Cart Button click
+         */
         btn_cart = view.findViewById(R.id.btn_cart);
 
         btn_cart.setOnClickListener(view1 -> {
             startActivity(new Intent(this.getActivity(),CartListActivity.class));
         });
 
-        mRecyclerView = view.findViewById(R.id.mostpop_plant_rv);
-        mAdapter = new PlantRecyclerViewAdapter(plantList,this.getContext());
 
-       //mRecyclerView.suppressLayout(true);
         // Inflate the layout for this fragment
         return view;
     }
 
+    //get all plants and store them in plantList
     void getPlantList(){
         if (count == 0){
             count++;
-            db.collection("Indoor")
+            db.collection("Plants")
                     .get()
                     .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                         @Override
@@ -109,8 +137,8 @@ public class HomeFragment extends Fragment {
 
                             if (task.isSuccessful()) {
                                 for (QueryDocumentSnapshot plants : task.getResult()) {
-                                    //Log.d("suuu", document.getId() + " => " + document.getData());
                                     Plant plant = plants.toObject(Plant.class);
+
                                     load = storageRef.child("PlantProfileImg").child(plant.getPlant_profile_img());
                                     load.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                         @Override
@@ -118,10 +146,10 @@ public class HomeFragment extends Fragment {
                                             // Got the download URL for 'users/me/profile.png'
                                             // Pass it to Picasso to download, show in ImageView and caching
                                             plant.setUri(uri.toString());
+                                            plantList.add(plant);
+                                            mAdapter.notifyDataSetChanged();
                                         }
                                     });
-                                    plantList.add(plant);
-                                    mAdapter.notifyDataSetChanged();
                                 }
                             } else {
                                 Log.d("suuu", "Error getting documents.", task.getException());
