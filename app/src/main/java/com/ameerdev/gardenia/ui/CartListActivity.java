@@ -143,20 +143,19 @@ public class CartListActivity extends AppCompatActivity {
          * Show Cart Items if exist
          */
         if (gardeniaApi.getCartList()!=null){
+
             mAdapter = new CartListAdapter(gardeniaApi.getCartList(), this);
 
             tv_no_cart_item_found.setVisibility(View.GONE);
 
             mRecyclerView.setVisibility(View.VISIBLE);
-
             LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-
             mRecyclerView.setAdapter(mAdapter);
-
             mRecyclerView.setLayoutManager(linearLayoutManager);
             mRecyclerView.setHasFixedSize(true);
-        }else{
 
+        }else{
+            tv_no_cart_item_found.setVisibility(View.VISIBLE);
         }
     }
 

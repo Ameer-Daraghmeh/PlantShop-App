@@ -2227,6 +2227,8 @@ int id browser_actions_menu_view 0x7f08006c
 int id btn_add_to_cart 0x7f08006d
 int id btn_cart 0x7f08006e
 int id btn_checkout 0x7f08006f
+int id btn_delete_plant 0x7f080247
+int id btn_go_to_cart 0x7f080246
 int id btn_login 0x7f080070
 int id btn_register 0x7f080071
 int id btn_search 0x7f080072
@@ -2397,6 +2399,7 @@ int id linearLayout 0x7f080116
 int id linearLayout2 0x7f080117
 int id linearLayout3 0x7f080118
 int id linearLayout4 0x7f080245
+int id linerlayt 0x7f080248
 int id listMode 0x7f080119
 int id list_item 0x7f08011a
 int id ll_cart_item_details 0x7f08011b

@@ -6,8 +6,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -48,11 +50,21 @@ public class MyPlantsAdapter extends RecyclerView.Adapter<MyPlantsAdapter.PlantV
 
         try {
             holder.bindPlant(plantList.get(position));
-            Log.d("sdd",plantList.get(position).getPlant_sun());
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+        holder.plant_Setting.setOnClickListener(view -> {
+            holder.btn_delete_plant.setVisibility(View.VISIBLE);
+        });
+        holder.ll.setOnClickListener(view -> {
+            holder.btn_delete_plant.setVisibility(View.GONE);
+
+        });
+        holder.btn_delete_plant.setOnClickListener(view -> {
+            plantList.remove(position);
+            holder.btn_delete_plant.setVisibility(View.GONE);
+        });
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,7 +92,9 @@ public class MyPlantsAdapter extends RecyclerView.Adapter<MyPlantsAdapter.PlantV
 
         TextView tv_plant_name,tv_sun, tv_water;
         ImageView iv_plant;
-        View mView;
+        View mView , plant_Setting;
+        Button btn_delete_plant;
+        LinearLayout ll;
 
         public PlantViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -89,8 +103,9 @@ public class MyPlantsAdapter extends RecyclerView.Adapter<MyPlantsAdapter.PlantV
             tv_sun = itemView.findViewById(R.id.tv_sun);
             tv_water = itemView.findViewById(R.id.tv_water);
             iv_plant = itemView.findViewById(R.id.iv_plant);
-
-
+            btn_delete_plant = itemView.findViewById(R.id.btn_delete_plant);
+            plant_Setting = itemView.findViewById(R.id.iv_plant_settings);
+            ll = itemView.findViewById(R.id.linerlayt);
 
             context = itemView.getContext();
             mView = itemView;

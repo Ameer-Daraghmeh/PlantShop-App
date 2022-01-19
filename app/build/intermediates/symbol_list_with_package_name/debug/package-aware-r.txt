@@ -2228,6 +2228,8 @@ id browser_actions_menu_view
 id btn_add_to_cart
 id btn_cart
 id btn_checkout
+id btn_delete_plant
+id btn_go_to_cart
 id btn_login
 id btn_register
 id btn_search
@@ -2398,6 +2400,7 @@ id linearLayout
 id linearLayout2
 id linearLayout3
 id linearLayout4
+id linerlayt
 id listMode
 id list_item
 id ll_cart_item_details

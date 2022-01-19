@@ -3,9 +3,11 @@ package com.ameerdev.gardenia.ui;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,7 +35,7 @@ public class PlantDetailsActivity extends AppCompatActivity {
             tv_description
                     ;
     ImageView image;
-    Button btn_add_to_cart;
+    Button btn_add_to_cart,btn_go_to_cart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +51,8 @@ public class PlantDetailsActivity extends AppCompatActivity {
         tv_description = findViewById(R.id.tv_product_details_description);
         image = findViewById(R.id.iv_product_detail_image);
         btn_add_to_cart = findViewById(R.id.btn_add_to_cart);
+        btn_go_to_cart = findViewById(R.id.btn_go_to_cart);
+
         FirebaseStorage storage = FirebaseStorage.getInstance();
 
         // Create a storage reference from our app
@@ -74,7 +78,11 @@ public class PlantDetailsActivity extends AppCompatActivity {
         btn_add_to_cart.setOnClickListener(view -> {
             //Add plant to cart list
             gardeniaApi.addPlantToCart();
-            //go to cart activity
+            Toast.makeText(PlantDetailsActivity.this, "Plant Added To Cart", Toast.LENGTH_SHORT).show();
+
+        });
+
+        btn_go_to_cart.setOnClickListener(view -> {
             startActivity(new Intent(PlantDetailsActivity.this,CartListActivity.class));
         });
 

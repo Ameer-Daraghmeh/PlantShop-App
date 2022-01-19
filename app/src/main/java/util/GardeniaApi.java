@@ -17,7 +17,7 @@ public class GardeniaApi extends Application {
     private static GardeniaApi instance;
     private  Plant clickedPlant;
     private ArrayList<Plant>cartList = new ArrayList<>();
-
+    Plant searchPlant;
 
 
     public static GardeniaApi getInstance() {
@@ -25,6 +25,14 @@ public class GardeniaApi extends Application {
             instance = new GardeniaApi();
         return instance;
 
+    }
+
+    public Plant getSearchPlant() {
+        return searchPlant;
+    }
+
+    public void setSearchPlant(Plant searchPlant) {
+        this.searchPlant = searchPlant;
     }
 
     public void setCartList(ArrayList<Plant> cartList) {

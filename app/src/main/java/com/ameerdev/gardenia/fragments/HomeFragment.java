@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -23,9 +24,8 @@ import com.ameerdev.gardenia.models.Plant;
 import com.ameerdev.gardenia.ui.CartListActivity;
 import com.ameerdev.gardenia.ui.IndoorActivity;
 import com.ameerdev.gardenia.ui.OutdoorActivity;
-import com.ameerdev.gardenia.ui.PlantDetailsActivity;
+import com.ameerdev.gardenia.ui.SearchActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -78,23 +78,16 @@ public class HomeFragment extends Fragment {
         et_search = view.findViewById(R.id.et_search);
         btn_search.setOnClickListener(view14 -> {
 
-            String plantName = et_search.getText().toString();
-
-            db.collection("Plants")
-                    .get().addOnCompleteListener(task -> {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot plants : task.getResult()) {
-                                Plant plant = plants.toObject(Plant.class);
-                                if (plants.getData().get("name").toString()
-                                        .equals(plantName)){
-
-                                    GardeniaApi.getInstance().setClickedPlant(plant);
-                                    Intent intent = new Intent(getContext() , PlantDetailsActivity.class);
-                                    startActivity(intent);
-                                }
-                            }
-                            }
-                    });
+            String tostmsg="Not found";
+            String plantName = et_search.getText().toString().toLowerCase();
+           for (int i=0 ; i <plantList.size() ; i++){
+               if (plantName.contains(plantList.get(i).getName().toLowerCase())){
+                   GardeniaApi.getInstance().setSearchPlant(plantList.get(i));
+                   startActivity(new Intent(getContext(),SearchActivity.class));
+                   tostmsg=null;
+               }
+           }
+            Toast.makeText(this.getContext(), tostmsg, Toast.LENGTH_SHORT).show();
         });
 
         /**
@@ -138,7 +131,7 @@ public class HomeFragment extends Fragment {
                             if (task.isSuccessful()) {
                                 for (QueryDocumentSnapshot plants : task.getResult()) {
                                     Plant plant = plants.toObject(Plant.class);
-
+                                    Log.d("sddd",plants.getData().toString());
                                     load = storageRef.child("PlantProfileImg").child(plant.getPlant_profile_img());
                                     load.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                         @Override
@@ -147,7 +140,6 @@ public class HomeFragment extends Fragment {
                                             // Pass it to Picasso to download, show in ImageView and caching
                                             plant.setUri(uri.toString());
                                             plantList.add(plant);
-                                            mAdapter.notifyDataSetChanged();
                                         }
                                     });
                                 }

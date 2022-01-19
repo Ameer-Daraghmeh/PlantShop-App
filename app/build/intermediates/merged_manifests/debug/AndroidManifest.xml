@@ -24,6 +24,10 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
+            android:name="com.ameerdev.gardenia.ui.SearchActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name="com.ameerdev.gardenia.LoginActivity"
             android:exported="true"
             android:theme="@style/AppTheme.NoActionBar"
