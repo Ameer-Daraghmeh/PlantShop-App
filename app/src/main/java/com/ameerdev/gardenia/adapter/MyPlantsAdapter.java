@@ -62,7 +62,10 @@ public class MyPlantsAdapter extends RecyclerView.Adapter<MyPlantsAdapter.PlantV
 
         });
         holder.btn_delete_plant.setOnClickListener(view -> {
-            plantList.remove(position);
+            if(plantList.contains(plantList.get(position))){
+                plantList.remove(position);
+                notifyDataSetChanged();
+            }
             holder.btn_delete_plant.setVisibility(View.GONE);
         });
 

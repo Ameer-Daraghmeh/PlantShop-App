@@ -16,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.ameerdev.gardenia.fragments.GardenFragment;
 import com.ameerdev.gardenia.models.Plant;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -116,9 +117,11 @@ public class LoginActivity extends AppCompatActivity {
                                                                                           }
                                         }
                                     });
-
+                            progressBar.setVisibility(View.GONE);
+                            GardenFragment.setCount(0);
                             Intent intent = new Intent(LoginActivity.this , MainActivity.class);
                             startActivity(intent);
+
                             //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.

@@ -86,7 +86,7 @@
                 android:layout_marginStart="@dimen/product_details_label_margin"
                 android:layout_marginEnd="@dimen/product_details_label_margin"
                 android:textColor="@color/colorSecondaryText"
-                android:textSize="@dimen/product_details_description_textSize"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_product_details_label"

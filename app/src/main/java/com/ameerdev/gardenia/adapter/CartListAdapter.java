@@ -54,6 +54,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.PlantV
             if (plantList.contains(plantList.get(position)))
             {
                 plantList.remove(position);
+                notifyDataSetChanged();
             }
         });
 

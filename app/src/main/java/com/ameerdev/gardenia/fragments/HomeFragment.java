@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ameerdev.gardenia.R;
+import com.ameerdev.gardenia.adapter.MyPlantsAdapter;
 import com.ameerdev.gardenia.adapter.PlantRecyclerViewAdapter;
 import com.ameerdev.gardenia.models.Plant;
 import com.ameerdev.gardenia.ui.CartListActivity;
@@ -44,7 +45,6 @@ public class HomeFragment extends Fragment {
 
     private static final ArrayList<Plant> plantList= new ArrayList<Plant>();
     private RecyclerView mRecyclerView;
-    private PlantRecyclerViewAdapter mAdapter;
     ImageButton btn_search;
     static FirebaseStorage storage = FirebaseStorage.getInstance();
     static StorageReference storageRef = storage.getReference();
@@ -53,7 +53,7 @@ public class HomeFragment extends Fragment {
     private final FirebaseFirestore db = FirebaseFirestore.getInstance();
     EditText et_search;
     static  int count = 0;
-
+    private PlantRecyclerViewAdapter mAdapter;
     ImageView iv_indoor;
     ImageView iv_outdoor;
 
@@ -61,12 +61,13 @@ public class HomeFragment extends Fragment {
         // Required empty public constructor
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        getPlantList();
         mAdapter = new PlantRecyclerViewAdapter(plantList,this.getContext());
+        getPlantList();
         mRecyclerView = view.findViewById(R.id.mostpop_plant_rv);
         mRecyclerView.setAdapter(mAdapter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
@@ -131,18 +132,18 @@ public class HomeFragment extends Fragment {
                             if (task.isSuccessful()) {
                                 for (QueryDocumentSnapshot plants : task.getResult()) {
                                     Plant plant = plants.toObject(Plant.class);
-                                    Log.d("sddd",plants.getData().toString());
                                     load = storageRef.child("PlantProfileImg").child(plant.getPlant_profile_img());
                                     load.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                         @Override
                                         public void onSuccess(Uri uri) {
                                             // Got the download URL for 'users/me/profile.png'
-                                            // Pass it to Picasso to download, show in ImageView and caching
                                             plant.setUri(uri.toString());
                                             plantList.add(plant);
+                                            mAdapter.notifyDataSetChanged();
                                         }
                                     });
                                 }
+
                             } else {
                                 Log.d("suuu", "Error getting documents.", task.getException());
                             }

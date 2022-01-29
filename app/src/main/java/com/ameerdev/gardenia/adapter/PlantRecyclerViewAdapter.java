@@ -23,7 +23,7 @@ import util.GardeniaApi;
 
 public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecyclerViewAdapter.PlantViewHolder>{
 
-    private  ArrayList<Plant> plantList = new ArrayList<>() ;
+    private static ArrayList<Plant> plantList = new ArrayList<>() ;
     Context context;
 
 

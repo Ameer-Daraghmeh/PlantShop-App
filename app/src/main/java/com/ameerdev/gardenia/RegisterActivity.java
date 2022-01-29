@@ -15,6 +15,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ameerdev.gardenia.fragments.GardenFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -139,11 +140,13 @@ public class RegisterActivity extends AppCompatActivity {
                                                                 gardeniaApi.setUserId(currentUserId);
                                                                 gardeniaApi.setUsername(username);
 
+                                                                progressBar.setVisibility(View.GONE);
+                                                                GardenFragment.setCount(0);
                                                                 Intent intent = new Intent(RegisterActivity.this,
                                                                         MainActivity.class);
-//                                                                intent.putExtra("username", username);
-//                                                                intent.putExtra("userId", currentUserId);
                                                                 startActivity(intent);
+                                                                Toast.makeText(RegisterActivity.this, "Create account successful",
+                                                                        Toast.LENGTH_SHORT).show();
 
 
                                                             } else {

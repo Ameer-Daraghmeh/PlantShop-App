@@ -17,6 +17,7 @@ import com.ameerdev.gardenia.MainActivity;
 import com.ameerdev.gardenia.R;
 import com.ameerdev.gardenia.RegisterActivity;
 import com.ameerdev.gardenia.adapter.CartListAdapter;
+import com.ameerdev.gardenia.fragments.GardenFragment;
 import com.ameerdev.gardenia.models.Plant;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -116,25 +117,22 @@ public class CartListActivity extends AppCompatActivity {
                                             .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                                                 @Override
                                                 public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                                                    if (Objects.requireNonNull(task.getResult()).exists()) {
-                                                        GardeniaApi.getInstance().setCartList(null);
-                                                        Intent intent = new Intent(CartListActivity.this,
-                                                                MainActivity.class);
-                                                        startActivity(intent);
-                                                        Toast.makeText(CartListActivity.this,
-                                                                "Payment Successful, Thank You",Toast.LENGTH_SHORT)
-                                                                .show();
-                                                    }
+
                                                 }
                                             });
                                 }
                             });
                 }
-                cartList = null;
+                Intent intent = new Intent(CartListActivity.this,
+                        MainActivity.class);
+                startActivity(intent);
+                GardenFragment.setCount(0);
+                Toast.makeText(CartListActivity.this,
+                        "Payment Successful, Thank You",Toast.LENGTH_SHORT)
+                        .show();
+                gardeniaApi.emptyCart();
 
             }
-
-
         });
 
         mRecyclerView = findViewById(R.id.rv_cart_items_list);
